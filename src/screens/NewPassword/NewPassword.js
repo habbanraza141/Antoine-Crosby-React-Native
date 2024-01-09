@@ -4,9 +4,10 @@ import { View, Text, StyleSheet } from 'react-native';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
+import navigationStrings from '../../config/navigationStrings';
 
 // create a component
-const NewPassword = () => {
+const NewPassword = ({navigation}) => {
     return (
         <View style={styles.container}>
         <View style={styles.midView}>
@@ -22,6 +23,8 @@ const NewPassword = () => {
             <TextInputWithLabel 
             placeholder={'Confirm New Password'}/>
             <BtnComponent
+                        onPress={()=>navigation.navigate(navigationStrings.LOGIN_ACCOUNT)}
+
                 btnStyle={{ marginTop: 20 , marginBottom: 20}}
                 btnText={'Submit'}
                 img={imagePath.btnForward} />
@@ -35,11 +38,11 @@ const NewPassword = () => {
 const styles = StyleSheet.create({
 container: {
     flex: 1,
-    marginTop: 96,
     backgroundColor: '#ffffff',
 },
 
 midView: {
+    marginTop: 115,
     paddingLeft: 20,
     paddingRight: 20
 }

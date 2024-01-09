@@ -4,9 +4,10 @@ import { View, Text, StyleSheet } from 'react-native';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
+import navigationStrings from '../../config/navigationStrings';
 
 // create a component
-const SignupVerification = () => {
+const SignupVerification = ({navigation}) => {
     return (
         <View style={styles.container}>
         <View style={styles.midView}>
@@ -35,11 +36,11 @@ const SignupVerification = () => {
 const styles = StyleSheet.create({
 container: {
     flex: 1,
-    marginTop: 96,
     backgroundColor: '#ffffff',
 },
 
 midView: {
+    marginTop: 96,
     paddingLeft: 20,
     paddingRight: 20
 }

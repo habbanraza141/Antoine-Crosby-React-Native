@@ -4,12 +4,14 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 import BtnComponent from '../../components/ButtonComponent';
+import navigationStrings from '../../config/navigationStrings';
 
 // create a component
-const OrderConfirmation = () => {
+const OrderConfirmation = ({navigation}) => {
     return (
         <View style={styles.container}>
             <HeaderComponent
+                onPress={()=>navigation.goBack()}
                 hdrText={'Order Confirmation'} />
             <Image
                 style={{ width: 270, height: 241, marginLeft: '5%' , marginVertical: 30}}

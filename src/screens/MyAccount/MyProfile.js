@@ -4,12 +4,14 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import HeaderComponent from '../../components/HeaderComponent';
 import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
+import navigationStrings from '../../config/navigationStrings';
 
 // create a component
-const MyProfile = () => {
+const MyProfile = ({navigation}) => {
     return (
         <View style={styles.container}>
             <HeaderComponent
+                onPress={()=>navigation.goBack()}
                 hdrText={'My Profile'} />
             <View style={{ width: '100%', height: 109, backgroundColor: '#14252A', flexDirection: 'row', alignItems: 'center', paddingLeft: 30 }} >
                 <Image
@@ -50,13 +52,15 @@ const MyProfile = () => {
                 <Text style={{ fontSize: 12, fontWeight: 'bold' }} >Password*</Text>
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }} >
                     <Text style={styles.inlineStyle}>*********</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                      onPress={()=>navigation.navigate(navigationStrings.CHANGE_PASSWORD)}>
                         <Text style={{ fontSize: 12, fontWeight: '600', fontStyle: 'italic', textDecorationLine: 'underline' }} >Change Password</Text>
                     </TouchableOpacity>
                 </View>
 
             </View>
             <BtnComponent
+                onPress={()=>navigation.navigate(navigationStrings.EDIT_PROFILE)}
                 btnText={'Edit Profile'}
                 btnStyle={{ marginVertical: 15 }}
                 img={imagePath.editprofile} />

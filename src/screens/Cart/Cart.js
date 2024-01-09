@@ -4,13 +4,15 @@ import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 import BtnComponent from '../../components/ButtonComponent';
+import navigationStrings from '../../config/navigationStrings';
 
 
 // create a component
-const Cart = () => {
+const Cart = ({navigation}) => {
     return (
         <View style={styles.container}>
             <HeaderComponent
+            onPress={()=>navigation.goBack()}
                 hdrText={'Cart'} />
             <View style={{ height: 121, backgroundColor: '#F4F5F7', width: '100%', padding: 7, flexDirection: 'row', alignItems: 'center', paddingRight: 15 }}>
 
@@ -74,6 +76,7 @@ const Cart = () => {
             </View>
 
             <BtnComponent
+            onPress={()=>navigation.navigate(navigationStrings.CHECKOUT1)}
             btnStyle={{marginVertical: 20}}
                 btnText={'Proceed To CheckOut'} />
 
@@ -85,6 +88,7 @@ const Cart = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#fff',
         paddingHorizontal: 20
     },
 });

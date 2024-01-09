@@ -6,6 +6,9 @@ import CategoryData from './CategoryData';
 import FeaturedItemData from './FeaturedItemData';
 import BestSellingItemData from './BestSellingItemData';
 import ExploreItemsData from './ExploreItemsData';
+import navigationStrings from '../../config/navigationStrings';
+import DrawerStack from '../../navigation/DrawerStack';
+
 
 const Categories = ({ item }) => {
     return (
@@ -66,7 +69,7 @@ const ExploreItems = ({ item }) => {
 
 
 // create a component
-const Home = () => {
+const HomeScreen = ({navigation}) => {
     const [isTrue, setTrue] = useState(false)
     const BestSellingItems = ({ item }) => {
         return (
@@ -107,30 +110,36 @@ const Home = () => {
             <View style={styles.mainView}>
                 <View style={styles.navbar}>
                     <View style={styles.nav}>
-                        <View style={{ height: 42, width: 42, backgroundColor: '#14252A', alignItems: 'center', justifyContent: 'center', borderRadius: 21, marginRight: 20 }} >
+                        <TouchableOpacity 
+                        onPress={()=>navigation.openDrawer()}
+                        style={{ height: 42, width: 42, backgroundColor: '#14252A', alignItems: 'center', justifyContent: 'center', borderRadius: 21, marginRight: 20 }} >
                             <Image
                                 style={{ width: 16, height: 13 }}
                                 resizeMode='contain'
                                 source={imagePath.menu} />
-                        </View>
+                        </TouchableOpacity>
                         <View>
                             <Text style={{ fontSize: 20, fontWeight: 'bold', marginBottom: 3 }}>Hello, </Text>
                             <Text style={{ fontSize: 16, fontWeight: 'bold', color: 'grey' }}>John Doe</Text>
                         </View>
                     </View>
                     <View style={styles.nav}>
-                        <View style={{ height: 42, width: 42, backgroundColor: '#ffffff', alignItems: 'center', justifyContent: 'center', borderRadius: 21, borderColor: '#ddddde', borderWidth: 1 }} >
+                        <TouchableOpacity 
+                        onPress={()=>navigation.navigate(navigationStrings.SEARCH)}
+                        style={{ height: 42, width: 42, backgroundColor: '#ffffff', alignItems: 'center', justifyContent: 'center', borderRadius: 21, borderColor: '#ddddde', borderWidth: 1 }} >
                             <Image
                                 style={{ width: 18, height: 18 }}
                                 resizeMode='contain'
                                 source={imagePath.search} />
-                        </View>
-                        <View style={{ height: 42, width: 42, backgroundColor: '#f4f4f4', alignItems: 'center', justifyContent: 'center', borderRadius: 21, borderColor: '#ddddde', borderWidth: 1, marginLeft: 20 }} >
+                        </TouchableOpacity>
+                        <TouchableOpacity 
+                        onPress={()=>navigation.navigate('CartStack')}
+                        style={{ height: 42, width: 42, backgroundColor: '#f4f4f4', alignItems: 'center', justifyContent: 'center', borderRadius: 21, borderColor: '#ddddde', borderWidth: 1, marginLeft: 20 }} >
                             <Image
                                 style={{ width: 24, height: 24 }}
                                 resizeMode='contain'
                                 source={imagePath.cart} />
-                        </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
                 <ScrollView>
@@ -147,9 +156,11 @@ const Home = () => {
                                     style={{ height: 12, width: 12 }}
                                     source={imagePath.star} />
                             </View>
-                            <View style={{ height: 38, width: 111, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center' }} >
+                            <TouchableOpacity 
+                            onPress={()=>navigation.navigate("ShopStack")}
+                            style={{ height: 38, width: 111, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center' }} >
                                 <Text style={{ fontSize: 16 }} >Shop Now</Text>
-                            </View>
+                            </TouchableOpacity>
                         </View>
                         <Image
                             style={{ height: 176, width: 120 }}
@@ -254,7 +265,8 @@ const styles = StyleSheet.create({
 
     mainView: {
         paddingLeft: 20,
-        paddingRight: 20
+        paddingRight: 20,
+        marginBottom: 100
     },
 
     nav: {
@@ -263,4 +275,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default Home;
+export default HomeScreen;

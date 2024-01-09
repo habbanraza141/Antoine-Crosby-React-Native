@@ -5,11 +5,15 @@ import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import CodeInput from '../../components/CodeInput';
+import BtnComponent from '../../components/ButtonComponent';
+import navigationStrings from '../../config/navigationStrings';
+
 // create a component
-const Checkout2 = () => {
+const Checkout2 = ({navigation}) => {
     return (
         <View style={styles.container}>
             <HeaderComponent
+                onPress={()=>navigation.goBack()}
                 hdrText={'CheckOut'} />
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
                 <Text style={{ fontStyle: 'italic', fontWeight: '600', width: 74 }} >Shipping Details</Text>
@@ -29,7 +33,10 @@ const Checkout2 = () => {
                 </View>
             </View>
             <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Saved Address</Text>
-           
+           <BtnComponent 
+           onPress={()=>navigation.navigate(navigationStrings.CHECKOUT3)}
+           btnText={'Submit'}
+           img={imagePath.btnForward}/>
         </View>
     );
 };

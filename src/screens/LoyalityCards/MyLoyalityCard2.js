@@ -7,10 +7,11 @@ import HeaderComponent from '../../components/HeaderComponent';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 
 // create a component
-const MyLoyalityCard2 = () => {
+const MyLoyalityCard2 = ({navigation}) => {
     return (
         <View style={styles.container}>
             <HeaderComponent
+            onPress={()=>navigation.goBack()}
                 hdrText={'My Loyality Card'} />
             <View>
                 <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 20, marginBottom: 10 }} >My Loyality Card</Text>

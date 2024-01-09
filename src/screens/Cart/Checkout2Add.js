@@ -5,12 +5,12 @@ import HeaderComponent from '../../components/HeaderComponent';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
-imagePath
 // create a component
 const Checkout2Add = () => {
     return (
         <View style={styles.container}>
             <HeaderComponent
+                onPress={()=>navigation.goBack()}
                 hdrText={'CheckOut'} />
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
                 <Text style={{ fontStyle: 'italic', fontWeight: '600', width: 74 }} >Shipping Details</Text>

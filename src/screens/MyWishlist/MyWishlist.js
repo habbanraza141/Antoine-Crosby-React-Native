@@ -1,15 +1,16 @@
 //import liraries
-import React, { Component } from 'react';
+import React  from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import imagePath from '../../config/imagePath';
 import HeaderComponent from '../../components/HeaderComponent';
 
 
 // create a component
-const MyWishlist = () => {
+const MyWishlist = ({navigation}) => {
     return (
         <View style={styles.container}>
             <HeaderComponent
+                onPress={()=>navigation.goBack()}
                 hdrText={'Wishlist'} />
             <View style={{ height: 108, backgroundColor: '#F4F5F7', width: '100%', padding: 7, flexDirection: 'row', alignItems: 'center', paddingRight: 15 }}>
             <TouchableOpacity style={{ padding: 5, position: 'absolute', right: 8, top: 8}}>
@@ -43,6 +44,7 @@ const MyWishlist = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#FFF',
         paddingHorizontal: 20
     },
 });

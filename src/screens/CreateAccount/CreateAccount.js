@@ -1,12 +1,12 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
-
+import navigationStrings from '../../config/navigationStrings';
 // create a component
-const CreateAccount = () => {
+const CreateAccount = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.midView}>
@@ -35,12 +35,17 @@ const CreateAccount = () => {
 
 
                 <BtnComponent
+                    onPress={()=>navigation.navigate(navigationStrings.LOGIN_ACCOUNT)}
                     btnStyle={{ marginTop: 35, marginBottom: 20 }}
                     btnText={'Sign Up'}
                     img={imagePath.btnForward} />
                 <View style={{ justifyContent: 'center', marginVertical: 8, flexDirection: 'row' }}>
                     <Text style={{ fontSize: 14 }}>Already have a account? </Text>
+                    <TouchableOpacity
+                    onPress={()=>navigation.navigate(navigationStrings.LOGIN_ACCOUNT)}>
+
                     <Text style={{ fontSize: 14, fontStyle: 'italic', textDecorationLine: 'underline' }}>Sign in</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
@@ -51,11 +56,11 @@ const CreateAccount = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: 96,
         backgroundColor: '#ffffff',
     },
-
+    
     midView: {
+        marginTop: 90,
         paddingLeft: 20,
         paddingRight: 20
     }

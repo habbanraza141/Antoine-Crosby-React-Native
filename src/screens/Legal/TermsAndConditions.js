@@ -4,10 +4,11 @@ import { View, Text, StyleSheet } from 'react-native';
 import HeaderComponent from '../../components/HeaderComponent';
 
 // create a component
-const TermsAndConditions = () => {
+const TermsAndConditions = ({navigation}) => {
     return (
         <View style={styles.container}>
             <HeaderComponent
+                        onPress={()=>navigation.goBack()}
                 hdrText={'Terms And Conditions'}/>
                         <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Terms And Conditions</Text>
 

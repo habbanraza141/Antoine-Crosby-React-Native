@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList, ScrollView }
 import HeaderComponent from '../../components/HeaderComponent';
 import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
+import navigationStrings from '../../config/navigationStrings';
 
 const Address = [
     {   id: 1,
@@ -33,44 +34,46 @@ const Address = [
     },
 ]
 
-const oneAddress = ({item}) => {
-    return (
-        <View style={{ height: 182, width: '100%', borderWidth: 1, borderColor: '#14252A', padding: 20, marginVertical: 10 }} >
-
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                <View style={{ flexDirection: 'row', alignItems: 'center', width: 115, justifyContent: 'space-between' }} >
-                    <View style={{ backgroundColor: '#14252A', height: 38, width: 37, borderRadius: 19, alignItems: 'center', justifyContent: 'center' }} >
-                        <Image
-                            style={{ width: 19, height: 18 }}
-                            source={imagePath.home2} />
-                    </View>
-                    <Text style={{ fontSize: 20, fontWeight: 'bold' }} >{item.placeName}</Text>
-                </View>
-
-                <View style={{ flexDirection: 'row', width: 45, justifyContent: 'space-between' }} >
-                    <TouchableOpacity>
-                        <Image
-                            style={{ width: 15, height: 15 }}
-                            source={imagePath.delete} />
-                    </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Image
-                            style={{ width: 15, height: 15 }}
-                            source={imagePath.edit2} />
-                    </TouchableOpacity>
-                </View>
-            </View>
-            <Text style={{ marginVertical: 15 }} >{item.placeAddress}</Text>
-            <Text>{item.city}</Text>
-        </View>
-    )
-}
 // create a component
-const MyAddress = () => {
+const MyAddress = ({navigation}) => {
+    const oneAddress = ({item}) => {
+        return (
+            <View style={{ height: 182, width: '100%', borderWidth: 1, borderColor: '#14252A', padding: 20, marginVertical: 10 }} >
+    
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', width: 115, justifyContent: 'space-between' }} >
+                        <View style={{ backgroundColor: '#14252A', height: 38, width: 37, borderRadius: 19, alignItems: 'center', justifyContent: 'center' }} >
+                            <Image
+                                style={{ width: 19, height: 18 }}
+                                source={imagePath.home2} />
+                        </View>
+                        <Text style={{ fontSize: 20, fontWeight: 'bold' }} >{item.placeName}</Text>
+                    </View>
+    
+                    <View style={{ flexDirection: 'row', width: 45, justifyContent: 'space-between' }} >
+                        <TouchableOpacity>
+                            <Image
+                                style={{ width: 15, height: 15 }}
+                                source={imagePath.delete} />
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                        onPress={()=>navigation.navigate(navigationStrings.EDIT_ADDRESS)}>
+                            <Image
+                                style={{ width: 15, height: 15 }}
+                                source={imagePath.edit2} />
+                        </TouchableOpacity>
+                    </View>
+                </View>
+                <Text style={{ marginVertical: 15 }} >{item.placeAddress}</Text>
+                <Text>{item.city}</Text>
+            </View>
+        )
+    }
     return (
         <ScrollView style={styles.container}>
             <HeaderComponent
-                hdrText={'My Address'} />
+                hdrText={'My Address'} 
+                onPress={()=>navigation.goBack()}/>
             <Text style={{ marginBottom: 20, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }}>Saved Address</Text>
             <View>
 
@@ -83,7 +86,9 @@ const MyAddress = () => {
             <BtnComponent 
             btnText={'Add New Address'}
             btnStyle={{marginVertical: 10}}
-            img={imagePath.btnForward}/>
+            img={imagePath.btnForward}
+            onPress={()=>navigation.navigate(navigationStrings.ADD_NEW_ADDRESS)}/>
+
         </ScrollView>
     );
 };

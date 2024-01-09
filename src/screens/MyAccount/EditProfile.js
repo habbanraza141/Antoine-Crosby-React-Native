@@ -7,10 +7,11 @@ import TextInputWithLabel from '../../components/TextInputWithLabel';
 import imagePath from '../../config/imagePath';
 
 // create a component
-const EditProfile = () => {
+const EditProfile = ({navigation}) => {
     return (
         <View style={styles.container}>
             <HeaderComponent
+              onPress={()=>navigation.goBack()}
                 hdrText={'Edit Profile'} />
             <View style={{ width: '100%', height: 109, backgroundColor: '#efeeec', flexDirection: 'row', alignItems: 'center', paddingLeft: 30 }} >
                 <ImageBackground
@@ -48,6 +49,7 @@ const EditProfile = () => {
   
 
             <BtnComponent
+                onPress={()=>navigation.goBack()}
                 btnText={'Save'}
                 btnStyle={{ marginVertical: 15 }}
                 img={imagePath.editprofile} />

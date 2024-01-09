@@ -5,9 +5,10 @@ import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
+import navigationStrings from '../../config/navigationStrings';
 
 // create a component
-const AddNewAddress = () => {
+const AddNewAddress = ({navigation}) => {
     return (
         <View style={styles.container}>
             <HeaderComponent
@@ -42,6 +43,7 @@ const AddNewAddress = () => {
 
 
             <BtnComponent
+                onPress={()=>navigation.navigate(navigationStrings.MY_ADDRESS)}
                 btnText={'Save Address'}
                 img={imagePath.btnForward}
                 btnStyle={{ marginVertical: 15 }} />

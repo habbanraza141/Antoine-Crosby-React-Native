@@ -5,12 +5,11 @@ import imagePath from '../../config/imagePath';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
 import HeaderComponent from '../../components/HeaderComponent';
-import Colors from '../../config/Colors';
 
 const colors = ['#AD43B7', '#64BABF', '#68B74D', '#DFAC2A', '#BA3E3E']; // Example colors
 
 // create a component
-const ShopDetailed = () => {
+const ShopDetailed = ({navigation}) => {
     const [quantity, setQuantity] = useState(0)
     const availableSizes = ['S', 'M', 'L', 'XL']; // Example sizes
     const [selectedSize, setSelectedSize] = useState(null);
@@ -28,11 +27,12 @@ const ShopDetailed = () => {
         <View style={styles.container}>
 
             <HeaderComponent
+            onPress={()=>navigation.goBack()}
                 container={{ paddingLeft: 20 }}
                 hdrText={'Shop Detailed'} />
             <ScrollView>
 
-                <View style={{ height: 335, backgroundColor: '#efeeec', flexDirection: 'row', marginVertical: 20 }} >
+                <View style={{ height: 335, backgroundColor: '#efeeec', flexDirection: 'row', marginBottom: 20 }} >
                     <Image
                         source={imagePath.fashionBag}
                         style={{ width: 287, height: 307 }} />

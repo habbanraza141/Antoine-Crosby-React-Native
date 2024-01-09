@@ -3,18 +3,16 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import imagePath from '../../config/imagePath';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
+import HeaderComponent from '../../components/HeaderComponent';
 
 // create a component
-const Search = () => {
+const Search = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.mainView}>
-                <View style={{ flexDirection: 'row' }} >
-                    <Image
-                        style={{ height: 18, width: 9 }}
-                        source={imagePath.back} />
-                    <Text style={{ fontSize: 16 }} >   Search Now</Text>
-                </View>
+                <HeaderComponent 
+                hdrText={'Search'}
+                onPress={()=>navigation.goBack()}/>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }} >
                     <TextInputWithLabel
                         inputStyle={{ width: 278 }} />
@@ -43,9 +41,8 @@ const styles = StyleSheet.create({
     },
 
     mainView: {
-        marginTop: 57,
         paddingLeft: 20,
-        paddingRight: 20
+        paddingRight: 20,
     }
 });
 

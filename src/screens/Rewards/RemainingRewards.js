@@ -5,10 +5,11 @@ import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 
 // create a component
-const RemainingRewards = () => {
+const RemainingRewards = ({navigation}) => {
     return (
         <View style={styles.container}>
             <HeaderComponent
+                onPress={()=>navigation.goBack()}
                 hdrText={'Redeem Points'} />
             <View style={{ height: 109, width: '100%', backgroundColor: '#F4F5F7', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center' }} >
                 <View>

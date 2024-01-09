@@ -8,10 +8,11 @@ const HeaderComponent = ({
     hdrText,
     onPress = () => { },
     container,
-
+    
 }) => {
     return (
-        <TouchableOpacity style={{ ...styles.container, ...container }}>
+        <TouchableOpacity style={{ ...styles.container, ...container }}
+        onPress={onPress}>
                 <Image
                     style={{ height: 18, width: 9 }}
                     source={imagePath.back} />

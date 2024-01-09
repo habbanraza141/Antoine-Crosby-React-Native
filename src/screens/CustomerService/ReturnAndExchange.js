@@ -60,6 +60,7 @@ const ReturnAndExchange = () => {
                         <Text>I have read and agree to Terms And Conditions</Text>
                     </View>
                     <BtnComponent 
+                    btnStyle={{marginBottom: 30}}
                     btnText={'Submit'}
                     img={imagePath.btnForward}/>
                 </View>

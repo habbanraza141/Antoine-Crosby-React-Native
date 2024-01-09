@@ -4,9 +4,10 @@ import { View, Text, StyleSheet } from 'react-native';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
+import navigationStrings from '../../config/navigationStrings';
 
 // create a component
-const OtpCode = () => {
+const OtpCode = ({navigation}) => {
     return (
         <View style={styles.container}>
         <View style={styles.midView}>
@@ -18,6 +19,8 @@ const OtpCode = () => {
            
 
             <BtnComponent
+                        onPress={()=>navigation.navigate(navigationStrings.NEW_PASSWORD)}
+
                 btnStyle={{ marginVertical: 27 }}
                 btnText={'Submit'}
                 img={imagePath.btnForward} />
@@ -34,11 +37,11 @@ const OtpCode = () => {
 const styles = StyleSheet.create({
 container: {
     flex: 1,
-    marginTop: 96,
     backgroundColor: '#ffffff',
 },
 
 midView: {
+    marginTop: 115,
     paddingLeft: 20,
     paddingRight: 20
 }

@@ -5,10 +5,11 @@ import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 
 // create a component
-const OrderNumber = () => {
+const OrderNumber = ({navigation}) => {
     return (
         <View style={styles.container}>
             <HeaderComponent
+                onPress={()=>navigation.goBack()}
                 hdrText={'Order Id#'}
                 container={{ marginBottom: 10, paddingHorizontal: 20 }} />
 
@@ -64,6 +65,7 @@ const OrderNumber = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#fff'
     },
 });
 

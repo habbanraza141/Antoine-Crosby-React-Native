@@ -5,12 +5,14 @@ import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
+import navigationStrings from '../../config/navigationStrings';
 
 // create a component
-const EditAddress = () => {
+const EditAddress = ({navigation}) => {
     return (
         <View style={styles.container}>
             <HeaderComponent
+            onPress={()=>navigation.goBack()}
                 hdrText={'Edit Address'} />
             <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }}>Edit Address</Text>
             
@@ -42,6 +44,7 @@ const EditAddress = () => {
 
 
             <BtnComponent
+                onPress={()=>navigation.navigate(navigationStrings.MY_ADDRESS)}
                 btnText={'Save Address'}
                 img={imagePath.btnForward}
                 btnStyle={{ marginVertical: 15 }} />
