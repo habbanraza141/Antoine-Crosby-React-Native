@@ -25,9 +25,9 @@ const HeaderComponent = ({
 // define your styles
 const styles = StyleSheet.create({
     container: {
-        marginTop: 57,
         flexDirection: 'row',
-        marginBottom: 30
+        marginBottom: 15, 
+        alignItems: 'center'
     }
 });
 

@@ -39,5 +39,5 @@ export default {
     RETURN_AND_EXCHANGE: "ReturnAndExchange",
     MY_ORDERS: "MyOrders",
     ORDER_NUMBER: "OrderNumber",
-    CONTACT_INFORMATION: "ContactInformation"
+    CONTACT_INFORMATION: "ContactInformation",
 }

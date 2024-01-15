@@ -1,33 +1,38 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, FlatList, ScrollView, SafeAreaView } from 'react-native';
 import HeaderComponent from '../../components/HeaderComponent';
 import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
 import navigationStrings from '../../config/navigationStrings';
 
 const Address = [
-    {   id: 1,
+    {
+        id: 1,
         placeName: 'OFFICE',
         placeAddress: '4806 Fittro Street hughes ,Victoria Street Morton Grove',
         city: 'Ottawa, IL 61350'
     },
-    {   id: 2,
+    {
+        id: 2,
         placeName: 'HOME',
         placeAddress: '4806 Fittro Street hughes ,Victoria Street Morton Grove',
         city: 'Ottawa, IL 61350'
     },
-    {   id: 3,
+    {
+        id: 3,
         placeName: 'OFFICE',
         placeAddress: '4806 Fittro Street hughes ,Victoria Street Morton Grove',
         city: 'Ottawa, IL 61350'
     },
-    {   id: 4,
+    {
+        id: 4,
         placeName: 'HOME',
         placeAddress: '4806 Fittro Street hughes ,Victoria Street Morton Grove',
         city: 'Ottawa, IL 61350'
     },
-    {   id: 5,
+    {
+        id: 5,
         placeName: 'OFFICE',
         placeAddress: '4806 Fittro Street hughes ,Victoria Street Morton Grove',
         city: 'Ottawa, IL 61350'
@@ -35,11 +40,11 @@ const Address = [
 ]
 
 // create a component
-const MyAddress = ({navigation}) => {
-    const oneAddress = ({item}) => {
+const MyAddress = ({ navigation }) => {
+    const oneAddress = ({ item }) => {
         return (
             <View style={{ height: 182, width: '100%', borderWidth: 1, borderColor: '#14252A', padding: 20, marginVertical: 10 }} >
-    
+
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                     <View style={{ flexDirection: 'row', alignItems: 'center', width: 115, justifyContent: 'space-between' }} >
                         <View style={{ backgroundColor: '#14252A', height: 38, width: 37, borderRadius: 19, alignItems: 'center', justifyContent: 'center' }} >
@@ -49,7 +54,7 @@ const MyAddress = ({navigation}) => {
                         </View>
                         <Text style={{ fontSize: 20, fontWeight: 'bold' }} >{item.placeName}</Text>
                     </View>
-    
+
                     <View style={{ flexDirection: 'row', width: 45, justifyContent: 'space-between' }} >
                         <TouchableOpacity>
                             <Image
@@ -57,7 +62,7 @@ const MyAddress = ({navigation}) => {
                                 source={imagePath.delete} />
                         </TouchableOpacity>
                         <TouchableOpacity
-                        onPress={()=>navigation.navigate(navigationStrings.EDIT_ADDRESS)}>
+                            onPress={() => navigation.navigate(navigationStrings.EDIT_ADDRESS)}>
                             <Image
                                 style={{ width: 15, height: 15 }}
                                 source={imagePath.edit2} />
@@ -70,26 +75,29 @@ const MyAddress = ({navigation}) => {
         )
     }
     return (
-        <ScrollView style={styles.container}>
-            <HeaderComponent
-                hdrText={'My Address'} 
-                onPress={()=>navigation.goBack()}/>
-            <Text style={{ marginBottom: 20, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }}>Saved Address</Text>
-            <View>
+        <SafeAreaView style={styles.container}>
 
-            <FlatList
-                data={Address}
-                renderItem={oneAddress} 
-                keyExtractor={item => item.id}
-                />
-            </View>
-            <BtnComponent 
-            btnText={'Add New Address'}
-            btnStyle={{marginVertical: 10}}
-            img={imagePath.btnForward}
-            onPress={()=>navigation.navigate(navigationStrings.ADD_NEW_ADDRESS)}/>
+            <ScrollView style={styles.mainView} >
+                <HeaderComponent
+                    hdrText={'My Address'}
+                    onPress={() => navigation.goBack()} />
+                <Text style={{ marginBottom: 20, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }}>Saved Address</Text>
+                <View>
 
-        </ScrollView>
+                    <FlatList
+                        data={Address}
+                        renderItem={oneAddress}
+                        keyExtractor={item => item.id}
+                    />
+                </View>
+                <BtnComponent
+                    btnText={'Add New Address'}
+                    btnStyle={{ marginVertical: 10 }}
+                    img={imagePath.btnForward}
+                    onPress={() => navigation.navigate(navigationStrings.ADD_NEW_ADDRESS)} />
+
+            </ScrollView>
+        </SafeAreaView>
     );
 };
 
@@ -97,8 +105,12 @@ const MyAddress = ({navigation}) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingHorizontal: 20
     },
+
+    mainView:{
+        paddingHorizontal: 20,
+        flex: 1
+    }
 });
 
 //make this component available to the app

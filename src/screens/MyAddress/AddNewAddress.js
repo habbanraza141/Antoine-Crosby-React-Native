@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
@@ -8,45 +8,48 @@ import BtnComponent from '../../components/ButtonComponent';
 import navigationStrings from '../../config/navigationStrings';
 
 // create a component
-const AddNewAddress = ({navigation}) => {
+const AddNewAddress = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <HeaderComponent
-                hdrText={'Add New Address'} />
-            <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }}>Add New Address</Text>
-            
-            <TextInputWithLabel
-                placeholder={'Address Line'} />
-            <TextInputWithLabel
-                placeholder={'Suite, Appartment'}/>
+            <SafeAreaView>
 
-            <View style={{ flexDirection: 'row' , justifyContent: 'space-between'}} >
-                <TextInputWithLabel
-                    placeholder={'City'}
-                    inputStyle={{width: 158}} />
+                <HeaderComponent
+                    hdrText={'Add New Address'} />
+                <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }}>Add New Address</Text>
 
                 <TextInputWithLabel
-                    placeholder={'State'}
-                    inputStyle={{width: 158}} />
-            </View>
-
-
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
+                    placeholder={'Address Line'} />
                 <TextInputWithLabel
-                    placeholder={'Country'}
-                    inputStyle={{width: 158}} />
+                    placeholder={'Suite, Appartment'} />
 
-                <TextInputWithLabel
-                    placeholder={'Zip Code'}
-                    inputStyle={{width: 158}} />
-            </View>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
+                    <TextInputWithLabel
+                        placeholder={'City'}
+                        inputStyle={{ width: 158 }} />
+
+                    <TextInputWithLabel
+                        placeholder={'State'}
+                        inputStyle={{ width: 158 }} />
+                </View>
 
 
-            <BtnComponent
-                onPress={()=>navigation.navigate(navigationStrings.MY_ADDRESS)}
-                btnText={'Save Address'}
-                img={imagePath.btnForward}
-                btnStyle={{ marginVertical: 15 }} />
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
+                    <TextInputWithLabel
+                        placeholder={'Country'}
+                        inputStyle={{ width: 158 }} />
+
+                    <TextInputWithLabel
+                        placeholder={'Zip Code'}
+                        inputStyle={{ width: 158 }} />
+                </View>
+
+
+                <BtnComponent
+                    onPress={() => navigation.navigate(navigationStrings.MY_ADDRESS)}
+                    btnText={'Save Address'}
+                    img={imagePath.btnForward}
+                    btnStyle={{ marginVertical: 15 }} />
+            </SafeAreaView>
         </View>
     );
 };

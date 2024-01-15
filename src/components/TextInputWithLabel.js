@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
     },
 
     inlineStyle: {
-        fontSize: 16,
         color: '#1B1000',
         flex: 1
     },

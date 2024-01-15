@@ -7,11 +7,12 @@ import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
 
 // create a component
-const ReturnAndExchange = () => {
+const ReturnAndExchange = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.topView}>
                 <HeaderComponent
+                    onPress={()=>navigation.goBack()}
                     hdrText={'Return & Exchange'} />
             <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Return & Exchange</Text>
 

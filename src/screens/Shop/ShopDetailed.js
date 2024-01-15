@@ -1,6 +1,6 @@
 //import liraries
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView, TouchableOpacity, TouchableWithoutFeedback, SafeAreaView } from 'react-native';
 import imagePath from '../../config/imagePath';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
@@ -25,6 +25,7 @@ const ShopDetailed = ({navigation}) => {
 
     return (
         <View style={styles.container}>
+<SafeAreaView>
 
             <HeaderComponent
             onPress={()=>navigation.goBack()}
@@ -196,7 +197,7 @@ const ShopDetailed = ({navigation}) => {
                             source={imagePath.dropdown} />
                     </TouchableOpacity>
 
-                    <View style={{ height: 172, borderWidth: 0.5, borderColor: '#A6A798', marginVertical: 10, padding: 15 }}>
+                    <View style={{  borderWidth: 0.5, borderColor: '#A6A798', marginVertical: 10, padding: 15 }}>
                         <View style={{ flexDirection: 'row' }} >
                             <Image
                                 style={{ height: 47, width: 47 }}
@@ -211,7 +212,7 @@ const ShopDetailed = ({navigation}) => {
                         <Text style={{ color: 'grey' }} >20 Feb 2022 </Text>
                     </View>
 
-                    <View style={{ height: 172, borderWidth: 0.5, borderColor: '#A6A798', marginVertical: 10, padding: 15 }}>
+                    <View style={{  borderWidth: 0.5, borderColor: '#A6A798', marginVertical: 10, padding: 15 }}>
 
                         <View style={{ flexDirection: 'row' }} >
                             <Image
@@ -254,13 +255,15 @@ const ShopDetailed = ({navigation}) => {
                         img={imagePath.btnForward} />
 
                     <BtnComponent
-                        btnStyle={{ marginTop: 20 }}
+                        btnStyle={{ marginVertical: 20 }}
                         img={imagePath.addtocart}
                         btnText={'Add To Cart'}
                         imgStyle={{ tintColor: '#fff' }} />
                 </View>
 
             </ScrollView>
+            </SafeAreaView>
+
         </View>
     );
 };

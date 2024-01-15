@@ -1,36 +1,39 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, SafeAreaView } from 'react-native';
 import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 import BtnComponent from '../../components/ButtonComponent';
 import navigationStrings from '../../config/navigationStrings';
 
 // create a component
-const OrderConfirmation = ({navigation}) => {
+const OrderConfirmation = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <HeaderComponent
-                onPress={()=>navigation.goBack()}
-                hdrText={'Order Confirmation'} />
-            <Image
-                style={{ width: 270, height: 241, marginLeft: '5%' , marginVertical: 30}}
-                source={imagePath.thanks} />
-            <View style={styles.midView}>
-                <View>
-                    <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 28 , textAlign: 'center'}} >Thanks</Text>
-                    <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 25 , textAlign: 'center'}} >Your Order Has Been Placed</Text>
-                </View>
-                <View>
-                    <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 16 , textAlign: 'center'}} >Order Number : 123456789</Text>
-                    <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 16 , textAlign: 'center'}} >loyalty Points Earned : 250 PTS</Text>
-                </View>
-                <BtnComponent
-                btnText={'Continue Shopping'}
-                img={imagePath.btnForward} 
-                btnStyle={{width: '100%'}}/>
+            <SafeAreaView>
 
-            </View>
+                <HeaderComponent
+                    onPress={() => navigation.goBack()}
+                    hdrText={'Order Confirmation'} />
+                <Image
+                    style={{ width: 270, height: 241, marginLeft: '5%', marginVertical: 30 }}
+                    source={imagePath.thanks} />
+                <View style={styles.midView}>
+                    <View>
+                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 28, textAlign: 'center' }} >Thanks</Text>
+                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 25, textAlign: 'center' }} >Your Order Has Been Placed</Text>
+                    </View>
+                    <View style={{marginVertical: 15}} >
+                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 16, textAlign: 'center' }} >Order Number : 123456789</Text>
+                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 16, textAlign: 'center' }} >loyalty Points Earned : 250 PTS</Text>
+                    </View>
+                    <BtnComponent
+                        btnText={'Continue Shopping'}
+                        img={imagePath.btnForward}
+                        btnStyle={{ width: '100%' }} />
+
+                </View>
+            </SafeAreaView>
         </View>
     );
 };
@@ -42,9 +45,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: 20
     },
     midView: {
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
-        height: 218,
     }
 });
 

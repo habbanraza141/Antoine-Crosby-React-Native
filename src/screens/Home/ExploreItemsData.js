@@ -2,15 +2,16 @@ import imagePath from "../../config/imagePath"
 
 const ExploreItemsData = [
     {   id: 1,
-        exploreItemName: 'Fashion Bag',
+        exploreItemName: 'T shirt',
         exploreItemPrice: 228,
-        exploreItemImage: imagePath.fashionBag
+        exploreItemImage: imagePath.tshirt3
     },
     {
         id: 2,
-        exploreItemName: 'Fashion Bag',
+        exploreItemName: 'Watch',
         exploreItemPrice: 228,
-        exploreItemImage: imagePath.fashionBag
+        exploreItemImage: imagePath.watch
+    
     },
     {
         id: 3,

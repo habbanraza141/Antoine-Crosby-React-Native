@@ -1,18 +1,21 @@
 //import liraries
-import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity, Button, SafeAreaView } from 'react-native';
 import imagePath from '../../config/imagePath';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import HeaderComponent from '../../components/HeaderComponent';
+import BtnComponent from '../../components/ButtonComponent';
+import navigationStrings from '../../config/navigationStrings';
+import { TextInput } from 'react-native-gesture-handler';
 
 // create a component
-const Search = ({navigation}) => {
+const Search = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <View style={styles.mainView}>
-                <HeaderComponent 
-                hdrText={'Search'}
-                onPress={()=>navigation.goBack()}/>
+            <SafeAreaView style={styles.mainView}>
+                <HeaderComponent
+                    hdrText={'Search'}
+                    onPress={() => navigation.goBack()} />
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }} >
                     <TextInputWithLabel
                         inputStyle={{ width: 278 }} />
@@ -24,11 +27,15 @@ const Search = ({navigation}) => {
                             source={imagePath.filter} />
                     </TouchableOpacity>
                 </View>
-                <View style={{flexDirection: 'row', justifyContent: 'space-between', marginVertical: 10}}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginVertical: 10 }}>
                     <Text>Recent Searches</Text>
-                    <Text style={{textDecorationLine: 'underline'}} >Clear All</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate(navigationStrings.FOODITEM)} >
+                        <Text style={{ textDecorationLine: 'underline' }} >Clear All</Text>
+                    </TouchableOpacity>
                 </View>
-            </View>
+
+
+            </SafeAreaView>
         </View>
     );
 };
@@ -38,11 +45,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
+        paddingHorizontal: 20
     },
 
     mainView: {
-        paddingLeft: 20,
-        paddingRight: 20,
+        flex: 1
     }
 });
 

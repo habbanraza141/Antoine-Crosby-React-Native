@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image , SafeAreaView} from 'react-native';
 import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 
@@ -8,6 +8,8 @@ import imagePath from '../../config/imagePath';
 const RemainingRewards = ({navigation}) => {
     return (
         <View style={styles.container}>
+
+                        <SafeAreaView style={styles.mainView} >
             <HeaderComponent
                 onPress={()=>navigation.goBack()}
                 hdrText={'Redeem Points'} />
@@ -33,6 +35,7 @@ const RemainingRewards = ({navigation}) => {
                     <Text style={{ fontSize: 11 }} >25 October 2023</Text>
                 </View>
             </View>
+            </SafeAreaView>
         </View>
     );
 };

@@ -13,7 +13,10 @@ export default {
     creditcard: require('../assets/creditcard.png'),
     loyalitycard: require('../assets/loyalitycard.png'),
     fashionBag: require('../assets/fashionBag.png'),
+    watch: require('../assets/watch.png'),
     tshirt: require('../assets/tshirt.png'),
+    tshirt2: require('../assets/tshirt2.png'),
+    tshirt3: require('../assets/tshirt3.png'),
     apparel: require('../assets/apparel.png'),
     btnForward: require('../assets/icons/btnFor.png'),
     cross: require('../assets/icons/cross.png'),
@@ -45,6 +48,7 @@ export default {
     editprofile: require('../assets/icons/editprofile.png'),
     connected: require('../assets/icons/connected.png'),
     bin: require('../assets/icons/bin.png'),
-
+    activeCheck: require('../assets/check.png'),
+    inActiveCheck: require('../assets/unchecked.png'),
 
 }

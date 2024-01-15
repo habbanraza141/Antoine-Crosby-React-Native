@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import HeaderComponent from '../../components/HeaderComponent';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
@@ -9,6 +9,8 @@ import imagePath from '../../config/imagePath';
 const Checkout2Add = () => {
     return (
         <View style={styles.container}>
+            <SafeAreaView>
+
             <HeaderComponent
                 onPress={()=>navigation.goBack()}
                 hdrText={'CheckOut'} />
@@ -54,6 +56,7 @@ const Checkout2Add = () => {
                 btnText={'Submit'}
                 btnStyle={{ marginVertical: 15 }}
                 img={imagePath.btnForward} />
+                </SafeAreaView>
         </View>
     );
 };

@@ -1,18 +1,17 @@
 //import liraries
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Image, FlatList, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, Image, FlatList, TouchableOpacity, SafeAreaView, ScrollView } from 'react-native';
 import imagePath from '../../config/imagePath';
 import CategoryData from './CategoryData';
 import FeaturedItemData from './FeaturedItemData';
 import BestSellingItemData from './BestSellingItemData';
 import ExploreItemsData from './ExploreItemsData';
 import navigationStrings from '../../config/navigationStrings';
-import DrawerStack from '../../navigation/DrawerStack';
 
 
 const Categories = ({ item }) => {
     return (
-        <TouchableOpacity style={{ height: 74, width: 79, alignItems: 'center', marginVertical: 24 }} >
+        <TouchableOpacity style={{ height: 74, width: 79, alignItems: 'center', marginVertical: 24 , marginRight: 5}} >
             <View style={{ marginBottom: 10 }} >
                 <Image
                     style={{ height: 51, width: 51 }}
@@ -24,11 +23,13 @@ const Categories = ({ item }) => {
 }
 const FeaturedItems = ({ item }) => {
     return (
-        <TouchableOpacity style={{ height: 230, width: 156, marginVertical: 24, borderWidth: 1, paddingLeft: 10, paddingRight: 10, marginRight: 12, paddingBottom: 10, justifyContent: 'space-between' }} >
-            <Image
-                style={{ height: 121, width: 121 }}
-                source={item.featuredItemImage} />
-            <View  >
+        <TouchableOpacity style={{ marginVertical: 24, borderWidth: 1, padding: 15, marginRight: 15, justifyContent: 'space-between' }} >
+            <View style={{ alignItems: 'center' }} >
+                <Image
+                    style={{ height: 121, width: 121 }}
+                    source={item.featuredItemImage} />
+            </View>
+            <View style={{ marginVertical: 10 }} >
                 <Text style={{ fontSize: 16, }} >New Arrival</Text>
                 <Text style={{ fontSize: 20, fontStyle: 'italic' }} >{item.featuredItemName}</Text>
 
@@ -46,11 +47,13 @@ const FeaturedItems = ({ item }) => {
 }
 const ExploreItems = ({ item }) => {
     return (
-        <TouchableOpacity style={{ height: 230, width: 156, marginVertical: 24, borderWidth: 1, paddingLeft: 10, paddingRight: 10, marginRight: 12, paddingBottom: 10, justifyContent: 'space-between' }} >
-            <Image
-                style={{ height: 121, width: 121 }}
-                source={item.exploreItemImage} />
-            <View  >
+        <TouchableOpacity style={{ marginVertical: 24, borderWidth: 1, padding: 15, marginRight: 15, justifyContent: 'space-between' }} >
+            <View style={{ alignItems: 'center' }} >
+                <Image
+                    style={{ height: 121, width: 121 }}
+                    source={item.exploreItemImage} />
+            </View>
+            <View style={{ marginVertical: 10 }} >
                 <Text style={{ fontSize: 16, }} >New Arrival</Text>
                 <Text style={{ fontSize: 20, fontStyle: 'italic' }} >{item.exploreItemName}</Text>
 
@@ -69,7 +72,7 @@ const ExploreItems = ({ item }) => {
 
 
 // create a component
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({ navigation }) => {
     const [isTrue, setTrue] = useState(false)
     const BestSellingItems = ({ item }) => {
         return (
@@ -107,12 +110,14 @@ const HomeScreen = ({navigation}) => {
     }
     return (
         <View style={styles.container}>
-            <View style={styles.mainView}>
+
+            <SafeAreaView style={styles.mainView}>
+
                 <View style={styles.navbar}>
                     <View style={styles.nav}>
-                        <TouchableOpacity 
-                        onPress={()=>navigation.openDrawer()}
-                        style={{ height: 42, width: 42, backgroundColor: '#14252A', alignItems: 'center', justifyContent: 'center', borderRadius: 21, marginRight: 20 }} >
+                        <TouchableOpacity
+                            onPress={() => navigation.openDrawer()}
+                            style={{ height: 42, width: 42, backgroundColor: '#14252A', alignItems: 'center', justifyContent: 'center', borderRadius: 21, marginRight: 20 }} >
                             <Image
                                 style={{ width: 16, height: 13 }}
                                 resizeMode='contain'
@@ -123,42 +128,45 @@ const HomeScreen = ({navigation}) => {
                             <Text style={{ fontSize: 16, fontWeight: 'bold', color: 'grey' }}>John Doe</Text>
                         </View>
                     </View>
+
                     <View style={styles.nav}>
-                        <TouchableOpacity 
-                        onPress={()=>navigation.navigate(navigationStrings.SEARCH)}
-                        style={{ height: 42, width: 42, backgroundColor: '#ffffff', alignItems: 'center', justifyContent: 'center', borderRadius: 21, borderColor: '#ddddde', borderWidth: 1 }} >
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate(navigationStrings.SEARCH)}
+                            style={{ height: 42, width: 42, backgroundColor: '#ffffff', alignItems: 'center', justifyContent: 'center', borderRadius: 21, borderColor: '#ddddde', borderWidth: 1 }} >
                             <Image
                                 style={{ width: 18, height: 18 }}
                                 resizeMode='contain'
                                 source={imagePath.search} />
                         </TouchableOpacity>
-                        <TouchableOpacity 
-                        onPress={()=>navigation.navigate('CartStack')}
-                        style={{ height: 42, width: 42, backgroundColor: '#f4f4f4', alignItems: 'center', justifyContent: 'center', borderRadius: 21, borderColor: '#ddddde', borderWidth: 1, marginLeft: 20 }} >
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate('CartStack')}
+                            style={{ height: 42, width: 42, backgroundColor: '#f4f4f4', alignItems: 'center', justifyContent: 'center', borderRadius: 21, borderColor: '#ddddde', borderWidth: 1, marginLeft: 20 }} >
                             <Image
                                 style={{ width: 24, height: 24 }}
                                 resizeMode='contain'
                                 source={imagePath.cart} />
                         </TouchableOpacity>
                     </View>
+
                 </View>
-                <ScrollView>
-                    <View style={{ height: 176, backgroundColor: '#14252A', width: '100%', marginVertical: 34, borderRadius: 20, justifyContent: 'space-between', flexDirection: 'row', paddingRight: 20 }} >
-                        <View style={{ justifyContent: 'space-between', paddingTop: 20, paddingLeft: 20, paddingBottom: 20, height: 176 }} >
-                            <View>
+
+                <ScrollView showsVerticalScrollIndicator={false}>
+                    <View style={{ height: 176, backgroundColor: '#14252A', width: '100%', marginVertical: 25, borderRadius: 20, justifyContent: 'space-between', flexDirection: 'row', paddingRight: 20 }} >
+                        <View style={{ justifyContent: 'center', paddingLeft: 20, height: 176 }} >
+                            <View style={{ marginBottom: 5 }} >
                                 <Text style={{ color: '#fff', fontSize: 20 }} >You Are</Text>
                                 <Text style={{ color: '#fff', fontStyle: 'italic', fontWeight: 'bold', fontSize: 26 }} >SPECIAL</Text>
                             </View>
-                            <View style={{ flexDirection: 'row' }} >
+                            <View style={{ flexDirection: 'row', marginBottom: 9 }} >
                                 <Text style={{ color: '#fff', fontSize: 12 }} >Men & Women Fashion  </Text>
                                 <Text style={{ color: '#fff', fontSize: 12 }} >4.8  </Text>
                                 <Image
                                     style={{ height: 12, width: 12 }}
                                     source={imagePath.star} />
                             </View>
-                            <TouchableOpacity 
-                            onPress={()=>navigation.navigate("ShopStack")}
-                            style={{ height: 38, width: 111, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center' }} >
+                            <TouchableOpacity
+                                onPress={() => navigation.navigate("ShopStack")}
+                                style={{ height: 38, width: 111, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center' }} >
                                 <Text style={{ fontSize: 16 }} >Shop Now</Text>
                             </TouchableOpacity>
                         </View>
@@ -166,75 +174,94 @@ const HomeScreen = ({navigation}) => {
                             style={{ height: 176, width: 120 }}
                             source={imagePath.men} />
                     </View>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
+
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }} >
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ fontSize: 20, marginTop: 3 }} >Our</Text>
                             <Text style={{ fontSize: 25, fontWeight: 'bold', color: '#14252A' }} > Category</Text>
                         </View>
-                        <Text style={{ fontSize: 14, marginTop: 9 }} >View All</Text>
+                        <TouchableOpacity >
+                            <Text style={{ fontSize: 14, textDecorationLine: 'underline' }} >View All</Text>
+                        </TouchableOpacity>
                     </View>
+
                     <FlatList
                         data={CategoryData}
                         renderItem={Categories}
                         horizontal={true}
+                        keyExtractor={(item) => item.id}
+                        showsHorizontalScrollIndicator={false}
                     />
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
+
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }} >
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ fontSize: 20, marginTop: 3 }} >Featured</Text>
                             <Text style={{ fontSize: 25, fontWeight: 'bold', color: '#14252A', fontStyle: 'italic' }} > Items</Text>
                         </View>
-                        <Text style={{ fontSize: 14, marginTop: 9 }} >View All</Text>
+                        <TouchableOpacity style={{ height: 18 }} >
+                            <Text style={{ fontSize: 14, textDecorationLine: 'underline' }} >View All</Text>
+                        </TouchableOpacity>
                     </View>
 
                     <FlatList
                         data={FeaturedItemData}
                         renderItem={FeaturedItems}
                         horizontal={true}
+                        keyExtractor={(item) => item.id}
+                        showsHorizontalScrollIndicator={false}
+
                     />
 
-                    <View style={{ height: 178, width: '100%', backgroundColor: '#14252A', borderRadius: 20, marginBottom: 20 }} >
-                        <Image
-                            style={{ height: 138, width: '100%', borderTopLeftRadius: 20, borderTopRightRadius: 20 }}
-                            source={imagePath.men2} />
-                        <View style={{ flexDirection: 'row' , justifyContent: 'space-between', alignItems: 'center',  height: 40, paddingHorizontal: 20}} >
+                    <View style={{ height: 178, width: '100%', backgroundColor: '#14252A', marginBottom: 20, borderRadius: 20, }} >
+                        <View style={{ height: 137, backgroundColor: '#727371', borderTopRightRadius: 20, borderTopLeftRadius: 20 }} />
+                        <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', height: 40, paddingHorizontal: 20 }} >
                             <Text style={{ color: '#fff', fontStyle: 'italic', fontSize: 20 }} >Look Book 1</Text>
                             <Text style={{ color: '#fff' }} >Play Video →</Text>
 
                         </View>
                     </View>
 
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }} >
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ fontSize: 20, marginTop: 3 }} >Best</Text>
-                            <Text style={{ fontSize: 25, fontWeight: 'bold', color: '#14252A', fontStyle: 'italic' }} > Selling Items</Text>
+                            <Text style={{ fontSize: 20, marginTop: 3 }} >Best Selling</Text>
+                            <Text style={{ fontSize: 25, fontWeight: 'bold', color: '#14252A', fontStyle: 'italic' }} > Items</Text>
                         </View>
-                        <Text style={{ fontSize: 14, marginTop: 9 }} >View All</Text>
+                        <TouchableOpacity style={{ height: 18 }} >
+                            <Text style={{ fontSize: 14, textDecorationLine: 'underline' }} >View All</Text>
+                        </TouchableOpacity>
                     </View>
 
                     <FlatList
                         data={BestSellingItemData}
                         renderItem={BestSellingItems}
+                        keyExtractor={(item) => item.id}
+                        showsHorizontalScrollIndicator={false}
+
                     />
 
-                    <View style={{ height: 297, width: '100%', backgroundColor: '#14252A', marginVertical: 20, alignItems: 'center', paddingTop: 15, paddingBottom: 10, justifyContent: 'space-between' }} >
+                    <View style={{ width: '100%', backgroundColor: '#14252A', marginVertical: 20, alignItems: 'center', padding: 20, justifyContent: 'space-between' }} >
                         <View>
                             <Text style={{ color: '#fff', fontSize: 16, textAlign: 'center', marginBottom: 7, fontWeight: 'bold' }} >Loyality Cards</Text>
                             <Text style={{ color: '#fff' }}   >Don't have your card yet? Apply Today!</Text>
                         </View>
-                        <Image
-                            style={{ height: 151, width: 268 }}
-                            source={imagePath.creditcard} />
+                        <View style={{marginVertical: 15}} >
+                            <Image
+                                style={{ height: 151, width: 268 }}
+                                source={imagePath.creditcard} />
+                        </View>
                         <TouchableOpacity style={{ height: 45, width: 248, borderWidth: 0.5, borderColor: '#fff', justifyContent: 'center', alignItems: 'center' }} >
                             <Text style={{ color: '#fff' }} >Apply Now</Text>
                         </TouchableOpacity>
                     </View>
 
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }} >
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ fontSize: 20, marginTop: 3 }} >Explore</Text>
                             <Text style={{ fontSize: 25, fontWeight: 'bold', color: '#14252A', fontStyle: 'italic' }} > Items</Text>
                         </View>
-                        <Text style={{ fontSize: 14, marginTop: 9 }} >View All</Text>
+                        <TouchableOpacity style={{ height: 18 }} >
+                            <Text style={{ fontSize: 14, textDecorationLine: 'underline' }} >View All</Text>
+                        </TouchableOpacity>
                     </View>
 
                     <FlatList
@@ -245,7 +272,7 @@ const HomeScreen = ({navigation}) => {
 
 
                 </ScrollView>
-            </View>
+            </SafeAreaView>
         </View>
     );
 };
@@ -255,18 +282,16 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#ffffff',
+        paddingHorizontal: 20
     },
 
     navbar: {
-        marginTop: 58,
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
 
     mainView: {
-        paddingLeft: 20,
-        paddingRight: 20,
-        marginBottom: 100
+        flex: 1
     },
 
     nav: {

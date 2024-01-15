@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import navigationStrings from '../config/navigationStrings';
-import { ContactInformation, HomeScreen, Search } from '../screens';
+import { ContactInformation, HomeScreen, Search} from '../screens';
 import ShopStack from './ShopStack';
 import CartStack from './CartStack';
 import CardStack from './CardStack';
@@ -30,6 +30,7 @@ export default function HomeStack() {
         component={Search}
         options={{ headerShown: false }}
       />
+
       <Stack.Screen
         name={"ShopStack"}
         component={ShopStack}

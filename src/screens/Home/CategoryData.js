@@ -2,25 +2,31 @@
 
 // create a component
 const CategoryData = [
-    {   id: 1,
-        categoryName: 'New Arrival',
-        categoryImage: require('../../assets/newArrival.png')},
-        {
+    {
+        id: 1,
+        categoryName: 'Women',
+        categoryImage: require('../../assets/accessories.png')
+    },
+    {
         id: 2,
-        categoryName: 'Apparel',
-        categoryImage: require('../../assets/apparel.png')},
-        {
+        categoryName: 'Men',
+        categoryImage: require('../../assets/beauty.png')
+    },
+    {
+        id: 4,
+        categoryName: 'Kids',
+        categoryImage: require('../../assets/apparel.png')
+    },
+    {
         id: 3,
-        categoryName: 'Beauty',
-        categoryImage: require('../../assets/beauty.png')},
-        {
-            id: 4,
         categoryName: 'Accessories',
-        categoryImage: require('../../assets/accessories.png')},
-        {
-            id: 5,
+        categoryImage: require('../../assets/newArrival.png')
+    },
+    {
+        id: 6,
         categoryName: 'Clearance',
-        categoryImage: require('../../assets/clearance.png')},
+        categoryImage: require('../../assets/clearance.png')
+    },
 ]
 
 //make this component available to the app

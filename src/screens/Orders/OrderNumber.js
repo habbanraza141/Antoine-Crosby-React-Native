@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, SafeAreaView } from 'react-native';
 import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 
@@ -8,6 +8,8 @@ import imagePath from '../../config/imagePath';
 const OrderNumber = ({navigation}) => {
     return (
         <View style={styles.container}>
+            <SafeAreaView>
+
             <HeaderComponent
                 onPress={()=>navigation.goBack()}
                 hdrText={'Order Id#'}
@@ -57,6 +59,7 @@ const OrderNumber = ({navigation}) => {
                     </View>
                 </View>
             </View>
+                            </SafeAreaView>
         </View>
     );
 };

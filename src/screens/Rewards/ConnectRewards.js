@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image , SafeAreaView} from 'react-native';
 import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
@@ -11,6 +11,8 @@ import navigationStrings from '../../config/navigationStrings';
 const ConnectRewards = ({navigation}) => {
     return (
         <View style={styles.container}>
+                        <SafeAreaView style={styles.mainView} >
+
             <HeaderComponent
                 onPress={()=>navigation.goBack()}
                 hdrText={'My Rewards'} />
@@ -32,6 +34,7 @@ const ConnectRewards = ({navigation}) => {
             btnText={'Connect'}
             btnStyle={{marginVertical: 10}}
             img={imagePath.btnForward}/>
+            </SafeAreaView>
         </View>
     );
 };
