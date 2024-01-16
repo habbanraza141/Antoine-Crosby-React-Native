@@ -151,7 +151,7 @@ const HomeScreen = ({ navigation }) => {
                 </View>
 
                 <ScrollView showsVerticalScrollIndicator={false}>
-                    <View style={{ height: 176, backgroundColor: '#14252A', width: '100%', marginVertical: 25, borderRadius: 20, justifyContent: 'space-between', flexDirection: 'row', paddingRight: 20 }} >
+                    <View style={{ height: 176, backgroundColor: '#14252A', width: '100%', marginVertical: 10, borderRadius: 20, justifyContent: 'space-between', flexDirection: 'row', paddingRight: 20 }} >
                         <View style={{ justifyContent: 'center', paddingLeft: 20, height: 176 }} >
                             <View style={{ marginBottom: 5 }} >
                                 <Text style={{ color: '#fff', fontSize: 20 }} >You Are</Text>
@@ -175,12 +175,13 @@ const HomeScreen = ({ navigation }) => {
                             source={imagePath.men} />
                     </View>
 
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }} >
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginVertical: 10 }} >
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ fontSize: 20, marginTop: 3 }} >Our</Text>
                             <Text style={{ fontSize: 25, fontWeight: 'bold', color: '#14252A' }} > Category</Text>
                         </View>
-                        <TouchableOpacity >
+                        <TouchableOpacity 
+                        onPress={()=>navigation.navigate("ShopStack")}>
                             <Text style={{ fontSize: 14, textDecorationLine: 'underline' }} >View All</Text>
                         </TouchableOpacity>
                     </View>
@@ -198,7 +199,10 @@ const HomeScreen = ({ navigation }) => {
                             <Text style={{ fontSize: 20, marginTop: 3 }} >Featured</Text>
                             <Text style={{ fontSize: 25, fontWeight: 'bold', color: '#14252A', fontStyle: 'italic' }} > Items</Text>
                         </View>
-                        <TouchableOpacity style={{ height: 18 }} >
+                        <TouchableOpacity 
+                        style={{ height: 18 }}
+                        onPress={()=>navigation.navigate("ShopStack")}>
+
                             <Text style={{ fontSize: 14, textDecorationLine: 'underline' }} >View All</Text>
                         </TouchableOpacity>
                     </View>
@@ -226,7 +230,9 @@ const HomeScreen = ({ navigation }) => {
                             <Text style={{ fontSize: 20, marginTop: 3 }} >Best Selling</Text>
                             <Text style={{ fontSize: 25, fontWeight: 'bold', color: '#14252A', fontStyle: 'italic' }} > Items</Text>
                         </View>
-                        <TouchableOpacity style={{ height: 18 }} >
+                        <TouchableOpacity style={{ height: 18 }} 
+                                                onPress={()=>navigation.navigate("ShopStack")}>
+
                             <Text style={{ fontSize: 14, textDecorationLine: 'underline' }} >View All</Text>
                         </TouchableOpacity>
                     </View>
@@ -259,7 +265,9 @@ const HomeScreen = ({ navigation }) => {
                             <Text style={{ fontSize: 20, marginTop: 3 }} >Explore</Text>
                             <Text style={{ fontSize: 25, fontWeight: 'bold', color: '#14252A', fontStyle: 'italic' }} > Items</Text>
                         </View>
-                        <TouchableOpacity style={{ height: 18 }} >
+                        <TouchableOpacity style={{ height: 18 }} 
+                                                onPress={()=>navigation.navigate("ShopStack")}>
+
                             <Text style={{ fontSize: 14, textDecorationLine: 'underline' }} >View All</Text>
                         </TouchableOpacity>
                     </View>
@@ -286,6 +294,7 @@ const styles = StyleSheet.create({
     },
 
     navbar: {
+        marginVertical: 15,
         flexDirection: 'row',
         justifyContent: 'space-between'
     },

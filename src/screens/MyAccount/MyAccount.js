@@ -29,7 +29,7 @@ const MyAccount = ({ navigation }) => {
 
                 <TouchableOpacity
                     onPress={() => navigation.navigate("ProfileStack")}
-                    style={{ height: 50, width: '100%', borderTopWidth: 0.5, borderColor: '#e2e2e2', justifyContent: 'center', marginTop: 20,  }} >
+                    style={{ height: 45, width: '100%', borderTopWidth: 0.5, borderColor: '#e2e2e2', justifyContent: 'center', marginTop: 20,  }} >
 
                     <View style={{ flexDirection: 'row', paddingLeft: 25 , alignItems: 'center'}} >
                         <Image
@@ -42,7 +42,7 @@ const MyAccount = ({ navigation }) => {
 
                 <TouchableOpacity
                     onPress={() => navigation.navigate("AddressStack")}
-                    style={{ height: 50, width: '100%', borderTopWidth: 0.5, borderColor: '#e2e2e2', justifyContent: 'center' }} >
+                    style={{ height: 45, width: '100%', borderTopWidth: 0.5, borderColor: '#e2e2e2', justifyContent: 'center' }} >
 
                     <View style={{ flexDirection: 'row', paddingLeft: 25 , alignItems: 'center'}} >
                         <Image
@@ -55,7 +55,7 @@ const MyAccount = ({ navigation }) => {
 
                 <TouchableOpacity
                     onPress={() => navigation.navigate('OrderStack')}
-                    style={{ height: 50, width: '100%', borderTopWidth: 0.5, borderColor: '#e2e2e2', justifyContent: 'center' }} >
+                    style={{ height: 45, width: '100%', borderTopWidth: 0.5, borderColor: '#e2e2e2', justifyContent: 'center' }} >
 
                     <View style={{ flexDirection: 'row', paddingLeft: 25 , alignItems: 'center'}} >
                         <Image
@@ -68,7 +68,7 @@ const MyAccount = ({ navigation }) => {
 
                 <TouchableOpacity
                     onPress={() => navigation.navigate('CardStack')}
-                    style={{ height: 50, width: '100%', borderTopWidth: 0.5, borderColor: '#e2e2e2', justifyContent: 'center' }} >
+                    style={{ height: 45, width: '100%', borderTopWidth: 0.5, borderColor: '#e2e2e2', justifyContent: 'center' }} >
 
                     <View style={{ flexDirection: 'row', paddingLeft: 25 , alignItems: 'center'}} >
                         <Image
@@ -82,7 +82,7 @@ const MyAccount = ({ navigation }) => {
                 <TouchableOpacity
 
                     onPress={() => navigation.navigate('RewardStack')}
-                    style={{ height: 50, width: '100%', borderTopWidth: 0.5, borderColor: '#e2e2e2', justifyContent: 'center' }} >
+                    style={{ height: 45, width: '100%', borderTopWidth: 0.5, borderColor: '#e2e2e2', justifyContent: 'center' }} >
 
                     <View style={{ flexDirection: 'row', paddingLeft: 25, alignItems: 'center' }} >
                         <Image
@@ -95,7 +95,7 @@ const MyAccount = ({ navigation }) => {
 
                 <TouchableOpacity
                     onPress={() => navigation.navigate(navigationStrings.REMAINING_REWARDS)}
-                    style={{ height: 50, width: '100%', borderTopWidth: 0.5, borderColor: '#e2e2e2', justifyContent: 'center' }} >
+                    style={{ height: 45, width: '100%', borderTopWidth: 0.5, borderColor: '#e2e2e2', justifyContent: 'center' }} >
 
                     <View style={{ flexDirection: 'row', paddingLeft: 25, alignItems: 'center' }} >
                         <Image
@@ -109,7 +109,7 @@ const MyAccount = ({ navigation }) => {
                 <TouchableOpacity
                     onPress={() => navigation.navigate(navigationStrings.MY_WISHLIST)}
 
-                    style={{ height: 50, width: '100%', borderTopWidth: 0.5, borderBottomWidth: 0.5, borderColor: '#e2e2e2', justifyContent: 'center' }} >
+                    style={{ height: 45, width: '100%', borderTopWidth: 0.5, borderBottomWidth: 0.5, borderColor: '#e2e2e2', justifyContent: 'center' }} >
 
                     <View style={{ flexDirection: 'row', paddingLeft: 25 , alignItems: 'center'}} >
                         <Image
@@ -121,7 +121,7 @@ const MyAccount = ({ navigation }) => {
                 </TouchableOpacity>
 
 
-                <View style={{ marginVertical: 30, paddingHorizontal: 20 }} >
+                <View style={{ marginVertical: 10, paddingHorizontal: 20 }} >
                     <BtnComponent
                         img={imagePath.logout}
                         btnText={'Logout'} />

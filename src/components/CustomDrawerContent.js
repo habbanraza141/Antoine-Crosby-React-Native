@@ -60,17 +60,17 @@ export default function CustomDrawerContent(props) {
       <DrawerItem
         label="Privacy Policy"
         labelStyle={styles.labelStyle}
-        onPress={() => navigation.navigate(navigationStrings.PRIVACY_POLICY)}
+        onPress={() => navigation.navigate("LegalStack", {screen: "PrivacyPolicy"})}
       />
       <DrawerItem
         label="Terms and Conditions"
         labelStyle={styles.labelStyle}
-        onPress={() => navigation.navigate(navigationStrings.TERMS_AND_CONDITIONS)}
+        onPress={() => navigation.navigate("LegalStack", {screen: "TermsAndConditions"})}
       />
       <DrawerItem
         label="Shipment policy"
         labelStyle={styles.labelStyle}
-        onPress={() => navigation.navigate(navigationStrings.SHIPMENT_POLICY)}
+        onPress={() => navigation.navigate("LegalStack", {screen: "ShipmentPolicy"})}
       />
       <DrawerItem
         label="Contact Infomation"

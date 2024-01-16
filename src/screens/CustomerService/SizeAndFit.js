@@ -1,6 +1,6 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, FlatList, TouchableOpacity, Image, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, FlatList, TouchableOpacity, Image, ScrollView, SafeAreaView } from 'react-native';
 import SizeData from './SizeData';
 import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
@@ -18,164 +18,166 @@ const Categories = ({ item }) => {
     )
 }
 // create a component
-const SizeAndFit = () => {
+const SizeAndFit = ({navigation}) => {
     return (
         <View style={styles.container}>
-
-            <View style={{ paddingHorizontal: 20 }}>
-            <HeaderComponent
-                hdrText={'Size And Fit'} />
-            <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Size & Fit</Text>
-
-
-                <FlatList
-                    data={SizeData}
-                    renderItem={Categories}
-                    horizontal={true}
-                />
-
-            </View>
-
-            <View style={{ height: 2, width: '100%', backgroundColor: '#e2e2e2', marginVertical: 15 }} >
-
-            </View>
-            <ScrollView>
-
-                <View style={{ paddingHorizontal: 20, }} >
-                    <View style={{ flexDirection: 'row' }} >
-                        <Text style={{ fontSize: 20 }} >Size Chart For </Text>
-                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 20, fontStyle: 'italic' }} >Men</Text>
-                    </View>
-                    <Text style={{ marginVertical: 20 }} >pellentesque pulvinar pellentesque habitant morbi. In hac habitasse platea pellentesque pulvinar pellentesque habitant morbi. In hac habitasse platea</Text>
-                    <View style={{ height: 297, width: '100%', alignItems: 'center', justifyContent: 'center' }} >
-                        <Image
-                            style={{ width: 261, height: 257 }}
-                            source={imagePath.tshirt} />
-                    </View>
+            <SafeAreaView style={styles.mainView} >
+                <View style={{ paddingHorizontal: 20 }}>
+                    <HeaderComponent
+                        onPress={()=>navigation.goBack()}
+                        hdrText={'Size And Fit'} />
+                    <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Size & Fit</Text>
 
 
-                    {/* Table Container */}
-                    <View style={styles.table}>
-                        {/* Table Head */}
-                        <View style={styles.table_head}>
-                            <View style={{ width: '18%', }}>
-                            </View>
-                            <View style={{ width: '24%', alignItems: 'center' }}>
-                                <Text style={styles.table_head_captions}>Length</Text>
-                            </View>
-                            <View style={{ width: '24%', alignItems: 'center' }}>
-                                <Text style={styles.table_head_captions}>Bust</Text>
-                            </View>
-                            <View style={{ width: '34%', alignItems: 'center' }}>
-                                <Text style={styles.table_head_captions}>Shoulders</Text>
-                            </View>
-                        </View>
-
-                        {/* Table Body - Single Row */}
-                        <View style={styles.table_body_first_row}>
-                            <View style={{ width: '18%', backgroundColor: '#e1e1e1', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
-                                <Text style={styles.table_data_left}>S</Text>
-                            </View>
-                            <View style={{ width: '24%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>01</Text>
-                            </View>
-                            <View style={{ width: '24%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>January</Text>
-                            </View>
-                            <View style={{ width: '34%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>$10,236</Text>
-                            </View>
-                        </View>
-
-                        {/* Table Body - Single Row */}
-                        <View style={styles.table_body_alternate_row}>
-                            <View style={{ width: '18%', backgroundColor: '#e1e1e1', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
-                                <Text style={styles.table_data_left}>M</Text>
-                            </View>
-                            <View style={{ width: '24%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>02</Text>
-                            </View>
-                            <View style={{ width: '24%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>February</Text>
-                            </View>
-                            <View style={{ width: '34%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>$9,236</Text>
-                            </View>
-                        </View>
-
-                        {/* Table Body - Single Row */}
-                        <View style={styles.table_body_first_row}>
-                            <View style={{ width: '18%', backgroundColor: '#e1e1e1', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
-                                <Text style={styles.table_data_left}>L</Text>
-                            </View>
-                            <View style={{ width: '24%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>02</Text>
-                            </View>
-                            <View style={{ width: '24%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>February</Text>
-                            </View>
-                            <View style={{ width: '34%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>$9,236</Text>
-                            </View>
-                        </View>
-
-                        {/* Table Body - Single Row */}
-                        <View style={styles.table_body_alternate_row}>
-                            <View style={{ width: '18%', backgroundColor: '#e1e1e1', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
-                                <Text style={styles.table_data_left}>XL</Text>
-                            </View>
-                            <View style={{ width: '24%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>02</Text>
-                            </View>
-                            <View style={{ width: '24%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>February</Text>
-                            </View>
-                            <View style={{ width: '34%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>$9,236</Text>
-                            </View>
-                        </View>
-
-                        {/* Table Body - Single Row */}
-                        <View style={styles.table_body_first_row}>
-                            <View style={{ width: '18%', backgroundColor: '#e1e1e1', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
-                                <Text style={styles.table_data_left}>2XL</Text>
-                            </View>
-                            <View style={{ width: '24%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>02</Text>
-                            </View>
-                            <View style={{ width: '24%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>February</Text>
-                            </View>
-                            <View style={{ width: '34%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>$9,236</Text>
-                            </View>
-                        </View>
-
-                        {/* Table Body - Single Row */}
-                        <View style={styles.table_body_alternate_row}>
-                            <View style={{ width: '18%', backgroundColor: '#e1e1e1', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
-                                <Text style={styles.table_data_left}>3XL</Text>
-                            </View>
-                            <View style={{ width: '24%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>02</Text>
-                            </View>
-                            <View style={{ width: '24%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>February</Text>
-                            </View>
-                            <View style={{ width: '34%', alignItems: 'center' }}>
-                                <Text style={styles.table_data}>$9,236</Text>
-                            </View>
-                        </View>
-
-
-
-                    </View>
-                    <Text style={{ fontSize: 20, marginVertical: 20 }} >Tips </Text>
-                    <Text style={{ marginBottom: 20 }} >pellentesque pulvinar pellentesque habitant morbi. In hac habitasse platea pellentesque pulvinar pellentesque habitant morbi. In hac habitasse platea</Text>
+                    <FlatList
+                        data={SizeData}
+                        renderItem={Categories}
+                        horizontal={true}
+                    />
 
                 </View>
 
-            </ScrollView>
+                <View style={{ height: 2, width: '100%', backgroundColor: '#e2e2e2', marginVertical: 15 }} >
+
+                </View>
+                <ScrollView>
+
+                    <View style={{ paddingHorizontal: 20, }} >
+                        <View style={{ flexDirection: 'row' }} >
+                            <Text style={{ fontSize: 20 }} >Size Chart For </Text>
+                            <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 20, fontStyle: 'italic' }} >Men</Text>
+                        </View>
+                        <Text style={{ marginVertical: 20 }} >pellentesque pulvinar pellentesque habitant morbi. In hac habitasse platea pellentesque pulvinar pellentesque habitant morbi. In hac habitasse platea</Text>
+                        <View style={{ height: 297, width: '100%', alignItems: 'center', justifyContent: 'center' }} >
+                            <Image
+                                style={{ width: 261, height: 257 }}
+                                source={imagePath.tshirt} />
+                        </View>
+
+
+                        {/* Table Container */}
+                        <View style={styles.table}>
+                            {/* Table Head */}
+                            <View style={styles.table_head}>
+                                <View style={{ width: '18%', }}>
+                                </View>
+                                <View style={{ width: '24%', alignItems: 'center' }}>
+                                    <Text style={styles.table_head_captions}>Length</Text>
+                                </View>
+                                <View style={{ width: '24%', alignItems: 'center' }}>
+                                    <Text style={styles.table_head_captions}>Bust</Text>
+                                </View>
+                                <View style={{ width: '34%', alignItems: 'center' }}>
+                                    <Text style={styles.table_head_captions}>Shoulders</Text>
+                                </View>
+                            </View>
+
+                            {/* Table Body - Single Row */}
+                            <View style={styles.table_body_first_row}>
+                                <View style={{ width: '18%', backgroundColor: '#e1e1e1', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+                                    <Text style={styles.table_data_left}>S</Text>
+                                </View>
+                                <View style={{ width: '24%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>01</Text>
+                                </View>
+                                <View style={{ width: '24%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>January</Text>
+                                </View>
+                                <View style={{ width: '34%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>$10,236</Text>
+                                </View>
+                            </View>
+
+                            {/* Table Body - Single Row */}
+                            <View style={styles.table_body_alternate_row}>
+                                <View style={{ width: '18%', backgroundColor: '#e1e1e1', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+                                    <Text style={styles.table_data_left}>M</Text>
+                                </View>
+                                <View style={{ width: '24%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>02</Text>
+                                </View>
+                                <View style={{ width: '24%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>February</Text>
+                                </View>
+                                <View style={{ width: '34%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>$9,236</Text>
+                                </View>
+                            </View>
+
+                            {/* Table Body - Single Row */}
+                            <View style={styles.table_body_first_row}>
+                                <View style={{ width: '18%', backgroundColor: '#e1e1e1', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+                                    <Text style={styles.table_data_left}>L</Text>
+                                </View>
+                                <View style={{ width: '24%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>02</Text>
+                                </View>
+                                <View style={{ width: '24%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>February</Text>
+                                </View>
+                                <View style={{ width: '34%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>$9,236</Text>
+                                </View>
+                            </View>
+
+                            {/* Table Body - Single Row */}
+                            <View style={styles.table_body_alternate_row}>
+                                <View style={{ width: '18%', backgroundColor: '#e1e1e1', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+                                    <Text style={styles.table_data_left}>XL</Text>
+                                </View>
+                                <View style={{ width: '24%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>02</Text>
+                                </View>
+                                <View style={{ width: '24%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>February</Text>
+                                </View>
+                                <View style={{ width: '34%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>$9,236</Text>
+                                </View>
+                            </View>
+
+                            {/* Table Body - Single Row */}
+                            <View style={styles.table_body_first_row}>
+                                <View style={{ width: '18%', backgroundColor: '#e1e1e1', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+                                    <Text style={styles.table_data_left}>2XL</Text>
+                                </View>
+                                <View style={{ width: '24%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>02</Text>
+                                </View>
+                                <View style={{ width: '24%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>February</Text>
+                                </View>
+                                <View style={{ width: '34%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>$9,236</Text>
+                                </View>
+                            </View>
+
+                            {/* Table Body - Single Row */}
+                            <View style={styles.table_body_alternate_row}>
+                                <View style={{ width: '18%', backgroundColor: '#e1e1e1', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+                                    <Text style={styles.table_data_left}>3XL</Text>
+                                </View>
+                                <View style={{ width: '24%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>02</Text>
+                                </View>
+                                <View style={{ width: '24%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>February</Text>
+                                </View>
+                                <View style={{ width: '34%', alignItems: 'center' }}>
+                                    <Text style={styles.table_data}>$9,236</Text>
+                                </View>
+                            </View>
+
+
+
+                        </View>
+                        <Text style={{ fontSize: 20, marginVertical: 20 }} >Tips </Text>
+                        <Text style={{ marginBottom: 20 }} >pellentesque pulvinar pellentesque habitant morbi. In hac habitasse platea pellentesque pulvinar pellentesque habitant morbi. In hac habitasse platea</Text>
+
+                    </View>
+
+                </ScrollView>
+            </SafeAreaView>
         </View>
     );
 };
@@ -185,7 +187,9 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-
+mainView:{
+    flex:1
+},
     table_head: {
         flexDirection: 'row',
         borderBottomWidth: 1,
