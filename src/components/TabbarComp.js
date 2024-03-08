@@ -1,6 +1,8 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
 import {Colors, Icon} from '../config';
+import { moderateScale } from '../config';
+import { moderateScaleVertical } from '../config';
 
 export default class TabbarComp extends React.Component {
   render() {
@@ -53,13 +55,13 @@ export default class TabbarComp extends React.Component {
               {isFocused ? (
                 <View
                   style={{
-                    width: 6,
-                    height: 6,
-                    borderRadius: 3,
+                    width: moderateScale(6),
+                    height: moderateScale(6),
+                    borderRadius: moderateScale(3),
                     backgroundColor: '#F1668D',
                     position: 'absolute',
-                    top: 15,
-                    left: 35
+                    top: moderateScaleVertical(15),
+                    left: moderateScale(35)
                   }}
                 />
               ) : null}

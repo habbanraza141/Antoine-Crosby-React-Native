@@ -14,6 +14,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-AntoineCrosby-AntoineCrosbyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-AntoineCrosby-AntoineCrosbyTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		AEEBE03A976846BB8F2EFCA6 /* Grotesk.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82420CA8C3BA4779A979E6A6 /* Grotesk.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		5B7EB9410499542E8C5724F5 /* Pods-AntoineCrosby-AntoineCrosbyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntoineCrosby-AntoineCrosbyTests.debug.xcconfig"; path = "Target Support Files/Pods-AntoineCrosby-AntoineCrosbyTests/Pods-AntoineCrosby-AntoineCrosbyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-AntoineCrosby.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AntoineCrosby.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AntoineCrosby/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		82420CA8C3BA4779A979E6A6 /* Grotesk.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Grotesk.ttf; path = ../src/assets/fonts/Grotesk.ttf; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-AntoineCrosby-AntoineCrosbyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntoineCrosby-AntoineCrosbyTests.release.xcconfig"; path = "Target Support Files/Pods-AntoineCrosby-AntoineCrosbyTests/Pods-AntoineCrosby-AntoineCrosbyTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -106,6 +108,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		49D1C7AEE8024D0DAC1474DC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82420CA8C3BA4779A979E6A6 /* Grotesk.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +133,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				49D1C7AEE8024D0DAC1474DC /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -243,6 +255,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				AEEBE03A976846BB8F2EFCA6 /* Grotesk.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

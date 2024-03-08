@@ -7,9 +7,19 @@ const ShopData = [
         shopItemImage: imagePath.fashionBag
     },
     {
-        shopItemName: 'Fashion Bag',
-        shopItemPrice: 228,
-        shopItemImage: imagePath.fashionBag
+        shopItemName: 'Kids Suit',
+        shopItemPrice: 780,
+        shopItemImage: imagePath.apparel
+    },
+    {
+        shopItemName: 'T shirt',
+        shopItemPrice: 30,
+        shopItemImage: imagePath.tshirt2
+    },
+    {
+        shopItemName: 'Green Tshirt',
+        shopItemPrice: 40,
+        shopItemImage: imagePath.tshirt3
     },
     {
         shopItemName: 'Fashion Bag',
@@ -17,29 +27,19 @@ const ShopData = [
         shopItemImage: imagePath.fashionBag
     },
     {
-        shopItemName: 'Fashion Bag',
-        shopItemPrice: 228,
-        shopItemImage: imagePath.fashionBag
+        shopItemName: 'Kids Suit',
+        shopItemPrice: 780,
+        shopItemImage: imagePath.apparel
     },
     {
-        shopItemName: 'Fashion Bag',
-        shopItemPrice: 228,
-        shopItemImage: imagePath.fashionBag
+        shopItemName: 'T shirt',
+        shopItemPrice: 30,
+        shopItemImage: imagePath.tshirt2
     },
     {
-        shopItemName: 'Fashion Bag',
-        shopItemPrice: 228,
-        shopItemImage: imagePath.fashionBag
-    },
-    {
-        shopItemName: 'Fashion Bag',
-        shopItemPrice: 228,
-        shopItemImage: imagePath.fashionBag
-    },
-    {
-        shopItemName: 'Fashion Bag',
-        shopItemPrice: 228,
-        shopItemImage: imagePath.fashionBag
+        shopItemName: 'Green Tshirt',
+        shopItemPrice: 40,
+        shopItemImage: imagePath.tshirt3
     },
 ]
 

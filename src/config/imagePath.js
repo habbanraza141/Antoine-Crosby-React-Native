@@ -25,7 +25,7 @@ export default {
     editprofile: require('../assets/icons/editprofile.png'),
     menu: require('../assets/icons/menu.png'),
     favouriteEmpty: require('../assets/icons/favourite.png'),
-    favouriteFilled: require('../assets/icons/favouritefilled.png'),
+    favouriteFilled: require('../assets/icons/heart4.png'),
     back: require('../assets/icons/back.png'),
     dropdown: require('../assets/icons/dropdown.png'),
     filter: require('../assets/icons/filter.png'),

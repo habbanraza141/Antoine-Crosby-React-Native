@@ -16,7 +16,7 @@ const Tab = createBottomTabNavigator();
 
 
 
-export default function AppStack () {
+export default function TabRoutes () {
     return (
         <Tab.Navigator
             tabBar={props => <TabbarComp {...props} />}

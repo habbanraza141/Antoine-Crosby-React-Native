@@ -1,4 +1,4 @@
-import imagePath from "../../config/imagePath"
+import imagePath from "../../../config/imagePath"
 
 const ExploreItemsData = [
     {   id: 1,

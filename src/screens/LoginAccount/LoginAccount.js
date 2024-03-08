@@ -6,7 +6,8 @@ import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
 import HeaderComponent from '../../components/HeaderComponent';
 import navigationStrings from '../../config/navigationStrings';
-import AppStack from '../../navigation/AppStack';
+import TabRoutes from '../../navigation/TabRoutes';
+import { moderateScale, moderateScaleVertical } from '../../config';
 // create a component
 const LoginAccount = ({navigation}) => {
     return (
@@ -58,9 +59,9 @@ const styles = StyleSheet.create({
     },
 
     midView: {
-        marginTop: 90,
-        paddingLeft: 20,
-        paddingRight: 20
+        marginTop: moderateScaleVertical(90),
+        paddingLeft: moderateScale(20),
+        paddingRight: moderateScale(20)
     }
 });
 

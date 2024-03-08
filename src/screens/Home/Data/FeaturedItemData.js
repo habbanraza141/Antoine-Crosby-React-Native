@@ -1,4 +1,6 @@
-import imagePath from "../../config/imagePath"
+import imagePath from "../../../config/imagePath"
+
+
 
 const FeaturedItemData = [
     {
