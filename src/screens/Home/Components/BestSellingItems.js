@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import imagePath from '../../../config/imagePath';
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart, removeFromCart } from '../../../redux/action';
+import { addToCart, removeFromCart } from '../../../redux/actions/action';
 import { textScale } from '../../../config';
 
 // create a component
