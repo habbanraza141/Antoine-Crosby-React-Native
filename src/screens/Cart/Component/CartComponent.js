@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Image, FlatList, TouchableOpacity, SafeAreaView, ScrollView } from 'react-native';
 import { useSelector } from 'react-redux';
+import { textScale } from '../../../config';
 
 
 const CartComponent = () => {
