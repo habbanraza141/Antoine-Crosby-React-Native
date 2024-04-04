@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity, StyleSheet} from 'react-native';
-import {Colors, Icon} from '../config';
+import {Colors, Icon, textScale} from '../config';
 import { moderateScale } from '../config';
 import { moderateScaleVertical } from '../config';
 
@@ -48,7 +48,7 @@ export default class TabbarComp extends React.Component {
               <Text
                 style={{
                   color: isFocused ? Colors.primary : Colors.grey,
-                  fontSize: 12,
+                  fontSize: textScale(12),
                 }}>
                 {route.name}
               </Text>

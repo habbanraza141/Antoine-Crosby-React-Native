@@ -5,6 +5,7 @@ import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
 import navigationStrings from '../../config/navigationStrings';
+import { textScale } from '../../config';
 
 // create a component
 const NewPassword = ({navigation}) => {
@@ -12,10 +13,10 @@ const NewPassword = ({navigation}) => {
         <View style={styles.container}>
         <View style={styles.midView}>
             <View style={{ flexDirection: 'row' }}>
-                <Text style={{ fontSize: 26 }}>New </Text>
+                <Text style={{ fontSize: textScale(26) }}>New </Text>
                 <Text style={{ fontWeight: 'bold', fontSize: 26, fontStyle: 'italic' }}>Password</Text>
             </View>
-            <Text style={{ fontSize: 14, marginVertical: 8 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </Text>
+            <Text style={{ fontSize: textScale(14), marginVertical: 8 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </Text>
            
             <TextInputWithLabel 
             placeholder={'Enter New Password'}/>

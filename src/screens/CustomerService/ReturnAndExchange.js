@@ -5,6 +5,7 @@ import HeaderComponent from '../../components/HeaderComponent';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
+import { textScale } from '../../config';
 
 // create a component
 const ReturnAndExchange = ({ navigation }) => {
@@ -18,7 +19,7 @@ const ReturnAndExchange = ({ navigation }) => {
                         <HeaderComponent
                             onPress={() => navigation.goBack()}
                             hdrText={'Return & Exchange'} />
-                        <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Return & Exchange</Text>
+                        <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }} >Return & Exchange</Text>
 
                         <Text>pellentesque pulvinar pellentesque habitant morbi. In hac habitasse platea pellentesque pulvinar pellentesque habitant morbi. In hac habitasse platea</Text>
                         <View style={{ height: 42, width: '100%', borderColor: '#7c7c7c', borderWidth: 1, marginVertical: 20, justifyContent: 'center', paddingLeft: 20 }} >
@@ -30,7 +31,7 @@ const ReturnAndExchange = ({ navigation }) => {
                     </View>
 
                     <View style={{ paddingHorizontal: 20 }} >
-                        <Text style={{ marginVertical: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Order Information</Text>
+                        <Text style={{ marginVertical: 15, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }} >Order Information</Text>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                             <TextInputWithLabel
                                 inputStyle={{ width: 157 }}
@@ -47,7 +48,7 @@ const ReturnAndExchange = ({ navigation }) => {
                     <View style={{ height: 2, width: '100%', backgroundColor: '#e2e2e2', marginVertical: 15 }} >
                     </View>
                     <View style={{ paddingHorizontal: 20 }} >
-                        <Text style={{ marginVertical: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Contact Information</Text>
+                        <Text style={{ marginVertical: 15, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }} >Contact Information</Text>
 
                         <TextInputWithLabel
                             placeholder={'Full Name'} />

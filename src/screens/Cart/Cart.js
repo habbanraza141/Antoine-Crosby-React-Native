@@ -5,6 +5,7 @@ import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 import BtnComponent from '../../components/ButtonComponent';
 import navigationStrings from '../../config/navigationStrings';
+import { textScale } from '../../config';
 
 
 // create a component
@@ -25,9 +26,9 @@ const Cart = ({ navigation }) => {
                                     style={{ height: 74, width: 74 }} />
                             </View>
                             <View style={{ justifyContent: 'space-between', marginLeft: 15, height: 100 }} >
-                                <Text style={{ fontSize: 16 }} >Shopping Bag</Text>
-                                <Text style={{ fontSize: 12, fontWeight: 'bold' }} >USD 87.00</Text>
-                                <Text style={{ fontSize: 12, fontWeight: 'bold' }} >Sub Total #45</Text>
+                                <Text style={{ fontSize: textScale(16) }} >Shopping Bag</Text>
+                                <Text style={{ fontSize: textScale(12), fontWeight: 'bold' }} >USD 87.00</Text>
+                                <Text style={{ fontSize: textScale(12), fontWeight: 'bold' }} >Sub Total #45</Text>
                                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: 210 }} >
                                     <View style={{ flexDirection: 'row', alignItems: 'center', width: 75, justifyContent: 'space-between' }} >
 
@@ -36,7 +37,7 @@ const Cart = ({ navigation }) => {
                                                 style={{ height: 17, width: 17 }}
                                                 source={require('../../assets/icons/minus.png')} />
                                         </TouchableOpacity>
-                                        <Text style={{ fontSize: 16 }} >3</Text>
+                                        <Text style={{ fontSize: textScale(16) }} >3</Text>
                                         <TouchableOpacity style={{ width: 24, height: 24, borderRadius: 12, justifyContent: 'center', backgroundColor: '#ffffff', alignItems: 'center' }} >
                                             <Image
                                                 style={{ height: 17, width: 17 }}
@@ -60,26 +61,26 @@ const Cart = ({ navigation }) => {
                         imgStyle={{ tintColor: '#14252A' }} />
 
                     <View style={{ height: 287, backgroundColor: '#14252A', marginVertical: 5, paddingHorizontal: 20, paddingVertical: 40, justifyContent: 'space-between' }}>
-                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 20, color: '#fff' }}>Order Details</Text>
+                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20), color: '#fff' }}>Order Details</Text>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ color: '#fff', fontSize: 15, fontStyle: 'italic' }} >Promo Code Discount</Text>
-                            <Text style={{ color: '#fff', fontSize: 15, }} >312.21 USD</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), fontStyle: 'italic' }} >Promo Code Discount</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), }} >312.21 USD</Text>
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ color: '#fff', fontSize: 15, fontStyle: 'italic' }} >Promo Code Discount</Text>
-                            <Text style={{ color: '#fff', fontSize: 15, }} >312.21 USD</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), fontStyle: 'italic' }} >Promo Code Discount</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), }} >312.21 USD</Text>
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ color: '#fff', fontSize: 15, fontStyle: 'italic' }} >Promo Code Discount</Text>
-                            <Text style={{ color: '#fff', fontSize: 15, }} >312.21 USD</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), fontStyle: 'italic' }} >Promo Code Discount</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), }} >312.21 USD</Text>
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ color: '#fff', fontSize: 15, fontStyle: 'italic' }} >Promo Code Discount</Text>
-                            <Text style={{ color: '#fff', fontSize: 15, }} >312.21 USD</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), fontStyle: 'italic' }} >Promo Code Discount</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), }} >312.21 USD</Text>
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ color: '#fff', fontSize: 15, fontStyle: 'italic' }} >Promo Code Discount</Text>
-                            <Text style={{ color: '#fff', fontSize: 15, }} >312.21 USD</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), fontStyle: 'italic' }} >Promo Code Discount</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), }} >312.21 USD</Text>
                         </View>
                     </View>
 

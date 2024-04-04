@@ -5,6 +5,7 @@ import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 import BtnComponent from '../../components/ButtonComponent';
 import navigationStrings from '../../config/navigationStrings';
+import { textScale } from '../../config';
 
 // create a component
 const OrderConfirmation = ({ navigation }) => {
@@ -20,12 +21,12 @@ const OrderConfirmation = ({ navigation }) => {
                     source={imagePath.thanks} />
                 <View style={styles.midView}>
                     <View>
-                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 28, textAlign: 'center' }} >Thanks</Text>
-                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 25, textAlign: 'center' }} >Your Order Has Been Placed</Text>
+                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: textScale(28), textAlign: 'center' }} >Thanks</Text>
+                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: textScale(25), textAlign: 'center' }} >Your Order Has Been Placed</Text>
                     </View>
                     <View style={{marginVertical: 15}} >
-                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 16, textAlign: 'center' }} >Order Number : 123456789</Text>
-                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 16, textAlign: 'center' }} >loyalty Points Earned : 250 PTS</Text>
+                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: textScale(16), textAlign: 'center' }} >Order Number : 123456789</Text>
+                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: textScale(16), textAlign: 'center' }} >loyalty Points Earned : 250 PTS</Text>
                     </View>
                     <BtnComponent
                         btnText={'Continue Shopping'}

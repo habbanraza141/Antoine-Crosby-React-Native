@@ -5,6 +5,7 @@ import HeaderComponent from '../../components/HeaderComponent';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
+import { textScale } from '../../config';
 // create a component
 const Checkout2Add = () => {
     return (
@@ -31,7 +32,7 @@ const Checkout2Add = () => {
                 <View style={{ height: 6, width: '55%', backgroundColor: '#D0D3D3', borderBottomRightRadius: 8, borderTopRightRadius: 8 }}>
                 </View>
             </View>
-            <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Add Address</Text>
+            <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }} >Add Address</Text>
                 <TextInputWithLabel
                     placeholder={'Address Line'} />
                 <TextInputWithLabel

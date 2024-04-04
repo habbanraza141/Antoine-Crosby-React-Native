@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import imagePath from '../../../config/imagePath';
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart, removeFromCart } from '../../../redux/action';
+import { textScale } from '../../../config';
 
 // create a component
 const BestSellingItems = (props) => {
@@ -36,25 +37,25 @@ const BestSellingItems = (props) => {
                 source={item.image} />
             <View style={{ justifyContent: 'space-between', width: '55%' }} >
                 <View>
-                    <Text style={{ fontSize: 16, }} >New Arrival</Text>
-                    <Text style={{ fontSize: 20, fontStyle: 'italic' }} >{item.name}</Text>
+                    <Text style={{ fontSize: textScale(16), }} >New Arrival</Text>
+                    <Text style={{ fontSize: textScale(20), fontStyle: 'italic' }} >{item.name}</Text>
                 </View>
                 <View style={{ flexDirection: 'row' }} >
-                    <Text style={{ fontSize: 14, fontWeight: 'bold' }} >${item.newPrice} </Text>
-                    <Text style={{ fontSize: 14, fontWeight: 'bold', textDecorationLine: 'line-through', color: 'grey' }} >${item.oldPrice}</Text>
+                    <Text style={{ fontSize: textScale(14), fontWeight: 'bold' }} >${item.newPrice} </Text>
+                    <Text style={{ fontSize: textScale(14), fontWeight: 'bold', textDecorationLine: 'line-through', color: 'grey' }} >${item.oldPrice}</Text>
                 </View>
                 <View style={{ flexDirection: 'row' }} >
                     {
                         isAdded ?
                             <TouchableOpacity onPress={() => handleRemoveFromCart(item)} style={{ height: 41, width: 109, backgroundColor: '#14252A', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row', paddingLeft: 7, paddingRight: 7, marginRight: 10 }}>
-                                <Text style={{ color: '#ffffff', fontSize: 12 }} >Remove From </Text>
+                                <Text style={{ color: '#ffffff', fontSize: textScale(12) }} >Remove From </Text>
                                 <Image
                                     style={{ height: 18, width: 18 }}
                                     source={imagePath.addtocart} />
                             </TouchableOpacity>
                             :
                             <TouchableOpacity onPress={() => handleAddToCart(item)} style={{ height: 41, width: 109, backgroundColor: '#14252A', alignItems: 'center', justifyContent: 'space-between', flexDirection: 'row', paddingLeft: 7, paddingRight: 7, marginRight: 10 }}>
-                                <Text style={{ color: '#ffffff', fontSize: 12 }} >Add To Cart</Text>
+                                <Text style={{ color: '#ffffff', fontSize: textScale(12) }} >Add To Cart</Text>
                                 <Image
                                     style={{ height: 18, width: 18 }}
                                     source={imagePath.addtocart} />

@@ -1,6 +1,7 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { textScale } from '../config';
 
 // create a component
 const BtnComponent = ({
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
     },
 
     btnTextStyle: {
-        fontSize: 16,
+        fontSize: textScale(16),
         color: 'white',
     },
 

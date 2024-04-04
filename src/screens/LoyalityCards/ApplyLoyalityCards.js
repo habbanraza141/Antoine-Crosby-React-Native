@@ -6,6 +6,7 @@ import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
 import HeaderComponent from '../../components/HeaderComponent';
 import navigationStrings from '../../config/navigationStrings';
+import { textScale } from '../../config';
 
 // create a component
 const ApplyLoyalityCards = ({ navigation }) => {
@@ -19,13 +20,13 @@ const ApplyLoyalityCards = ({ navigation }) => {
                 showsVerticalScrollIndicator={false}>
 
                     <View>
-                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Apply Now Loyality Cards</Text>
+                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }} >Apply Now Loyality Cards</Text>
                         <Text style={{ marginVertical: 18 }} >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</Text>
                         <Image
                             resizeMode='contain'
                             style={{ height: 205, width: '100%' }}
                             source={require('../../assets/creditcard.png')} />
-                        <Text style={{ marginVertical: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Personal Information</Text>
+                        <Text style={{ marginVertical: 15, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }} >Personal Information</Text>
 
                     </View>
                     <View>

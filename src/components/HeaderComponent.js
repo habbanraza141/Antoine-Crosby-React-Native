@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Image, Text, StyleSheet, TouchableOpacity, View } from 'react-native';
 import imagePath from '../config/imagePath';
+import { textScale } from '../config';
 
 // create a component
 const HeaderComponent = ({
@@ -16,7 +17,7 @@ const HeaderComponent = ({
                 <Image
                     style={{ height: 18, width: 9 }}
                     source={imagePath.back} />
-                <Text style={{ fontSize: 16 }} >   {hdrText}</Text>
+                <Text style={{ fontSize: textScale(16) }} >   {hdrText}</Text>
             </TouchableOpacity>
 
     );

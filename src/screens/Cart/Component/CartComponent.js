@@ -11,7 +11,7 @@ const CartComponent = () => {
     }, [cartData])
     return (
         <View>
-            <Text style={{ color: '#fff', fontSize: 9, fontWeight: 'bold', textAlign: 'center' }} >{cartItems} </Text>
+            <Text style={{ color: '#fff', fontSize: textScale(9), fontWeight: 'bold', textAlign: 'center' }} >{cartItems} </Text>
         </View>
     )
 }

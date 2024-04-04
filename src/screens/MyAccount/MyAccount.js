@@ -5,6 +5,7 @@ import HeaderComponent from '../../components/HeaderComponent';
 import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
 import navigationStrings from '../../config/navigationStrings';
+import { textScale } from '../../config';
 
 // create a component
 const MyAccount = ({ navigation }) => {
@@ -21,8 +22,8 @@ const MyAccount = ({ navigation }) => {
                             style={{ height: 78, width: 78, marginRight: 15 }}
                             source={imagePath.men3} />
                         <View>
-                            <Text style={{ fontSize: 20 }} >Andks Dbnsjndks</Text>
-                            <Text style={{ fontSize: 15 }} >jhds@gmakjkds.com</Text>
+                            <Text style={{ fontSize: textScale(20) }} >Andks Dbnsjndks</Text>
+                            <Text style={{ fontSize: textScale(15) }} >jhds@gmakjkds.com</Text>
                         </View>
                     </View>
                 </View>
@@ -36,7 +37,7 @@ const MyAccount = ({ navigation }) => {
                             resizeMode='contain'
                             style={{ width: 21, height: 18, marginRight: 15 }}
                             source={imagePath.myprofile} />
-                        <Text style={{ fontSize: 18 }} >My Profile</Text>
+                        <Text style={{ fontSize: textScale(18) }} >My Profile</Text>
                     </View>
                 </TouchableOpacity>
 
@@ -49,7 +50,7 @@ const MyAccount = ({ navigation }) => {
                             resizeMode='contain'
                             style={{ width: 21, height: 18, marginRight: 15 }}
                             source={imagePath.myaddress} />
-                        <Text style={{ fontSize: 18 }} >My Address</Text>
+                        <Text style={{ fontSize: textScale(18) }} >My Address</Text>
                     </View>
                 </TouchableOpacity>
 
@@ -62,7 +63,7 @@ const MyAccount = ({ navigation }) => {
                             resizeMode='contain'
                             style={{ width: 21, height: 18, marginRight: 15 }}
                             source={imagePath.myorder} />
-                        <Text style={{ fontSize: 18 }} >My Orders</Text>
+                        <Text style={{ fontSize: textScale(18) }} >My Orders</Text>
                     </View>
                 </TouchableOpacity>
 
@@ -75,7 +76,7 @@ const MyAccount = ({ navigation }) => {
                             resizeMode='contain'
                             style={{ width: 21, height: 18, marginRight: 15 }}
                             source={imagePath.myloyalitycard} />
-                        <Text style={{ fontSize: 18 }} >My Loyality Cards</Text>
+                        <Text style={{ fontSize: textScale(18) }} >My Loyality Cards</Text>
                     </View>
                 </TouchableOpacity>
 
@@ -89,7 +90,7 @@ const MyAccount = ({ navigation }) => {
                             resizeMode='contain'
                             style={{ width: 21, height: 18, marginRight: 15 }}
                             source={imagePath.myrewards} />
-                        <Text style={{ fontSize: 18 }} >My Rewards</Text>
+                        <Text style={{ fontSize: textScale(18) }} >My Rewards</Text>
                     </View>
                 </TouchableOpacity>
 
@@ -102,7 +103,7 @@ const MyAccount = ({ navigation }) => {
                             resizeMode='contain'
                             style={{ width: 21, height: 18, marginRight: 15 }}
                             source={imagePath.myrewards} />
-                        <Text style={{ fontSize: 18 }} >Redeem points</Text>
+                        <Text style={{ fontSize: textScale(18) }} >Redeem points</Text>
                     </View>
                 </TouchableOpacity>
 
@@ -116,7 +117,7 @@ const MyAccount = ({ navigation }) => {
                             resizeMode='contain'
                             style={{ width: 21, height: 18, marginRight: 15 }}
                             source={imagePath.mywishlist} />
-                        <Text style={{ fontSize: 18 }} >My Wishlist</Text>
+                        <Text style={{ fontSize: textScale(18) }} >My Wishlist</Text>
                     </View>
                 </TouchableOpacity>
 

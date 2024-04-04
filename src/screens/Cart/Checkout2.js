@@ -7,6 +7,7 @@ import TextInputWithLabel from '../../components/TextInputWithLabel';
 import CodeInput from '../../components/CodeInput';
 import BtnComponent from '../../components/ButtonComponent';
 import navigationStrings from '../../config/navigationStrings';
+import { textScale } from '../../config';
 
 // create a component
 const Checkout2 = ({ navigation }) => {
@@ -34,7 +35,7 @@ const Checkout2 = ({ navigation }) => {
                     <View style={{ height: 6, width: '55%', backgroundColor: '#D0D3D3', borderBottomRightRadius: 8, borderTopRightRadius: 8 }}>
                     </View>
                 </View>
-                <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Saved Address</Text>
+                <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }} >Saved Address</Text>
                 <BtnComponent
                     onPress={() => navigation.navigate(navigationStrings.CHECKOUT3)}
                     btnText={'Submit'}

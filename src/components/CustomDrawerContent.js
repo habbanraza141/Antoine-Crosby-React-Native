@@ -7,6 +7,7 @@ import ShopStack from '../navigation/ShopStack';
 import CardStack from '../navigation/CardStack';
 import ProfileStack from '../navigation/ProfileStack';
 import navigationStrings from '../config/navigationStrings';
+import { textScale } from '../config';
 
 
 export default function CustomDrawerContent(props) {
@@ -20,8 +21,8 @@ export default function CustomDrawerContent(props) {
           style={{ height: 62, width: 65, marginRight: 15 }}
           source={imagePath.men3} />
         <View>
-          <Text style={{ fontSize: 15, color: '#fff' }} >Andks Dbnsjndks</Text>
-          <Text style={{ fontSize: 12 , color: '#CDCDCD' }} >jhds@gmakjkds.com</Text>
+          <Text style={{ fontSize: textScale(15), color: '#fff' }} >Andks Dbnsjndks</Text>
+          <Text style={{ fontSize: textScale(12) , color: '#CDCDCD' }} >jhds@gmakjkds.com</Text>
         </View>
       </View>
       <View style={{height: 0.5, backgroundColor: '#9A9A9A', marginHorizontal: 20}} >

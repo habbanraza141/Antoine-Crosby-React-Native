@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, FlatList, TouchableOpacity, Image, ScrollView, 
 import SizeData from './SizeData';
 import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
+import { textScale } from '../../config';
 
 const Categories = ({ item }) => {
     return (
@@ -13,7 +14,7 @@ const Categories = ({ item }) => {
                     style={{ height: 51, width: 51 }}
                     source={item.categoryImage} />
             </View>
-            <Text style={{ fontSize: 10 }} >{item.categoryName}</Text>
+            <Text style={{ fontSize: textScale(10) }} >{item.categoryName}</Text>
         </TouchableOpacity>
     )
 }
@@ -26,7 +27,7 @@ const SizeAndFit = ({navigation}) => {
                     <HeaderComponent
                         onPress={()=>navigation.goBack()}
                         hdrText={'Size And Fit'} />
-                    <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Size & Fit</Text>
+                    <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }} >Size & Fit</Text>
 
 
                     <FlatList
@@ -44,8 +45,8 @@ const SizeAndFit = ({navigation}) => {
 
                     <View style={{ paddingHorizontal: 20, }} >
                         <View style={{ flexDirection: 'row' }} >
-                            <Text style={{ fontSize: 20 }} >Size Chart For </Text>
-                            <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 20, fontStyle: 'italic' }} >Men</Text>
+                            <Text style={{ fontSize: textScale(20) }} >Size Chart For </Text>
+                            <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20), fontStyle: 'italic' }} >Men</Text>
                         </View>
                         <Text style={{ marginVertical: 20 }} >pellentesque pulvinar pellentesque habitant morbi. In hac habitasse platea pellentesque pulvinar pellentesque habitant morbi. In hac habitasse platea</Text>
                         <View style={{ height: 297, width: '100%', alignItems: 'center', justifyContent: 'center' }} >
@@ -224,12 +225,12 @@ mainView:{
     },
 
     table_data: {
-        fontSize: 16,
+        fontSize: textScale(16),
         fontStyle: 'italic'
 
     },
     table_data_left: {
-        fontSize: 16,
+        fontSize: textScale(16),
         fontWeight: '700'
 
     },

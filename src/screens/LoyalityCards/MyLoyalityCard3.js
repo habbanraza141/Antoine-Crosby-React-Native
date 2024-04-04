@@ -5,6 +5,7 @@ import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
 import HeaderComponent from '../../components/HeaderComponent';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
+import { textScale } from '../../config';
 
 // create a component
 const MyLoyalityCard3 = () => {
@@ -15,7 +16,7 @@ const MyLoyalityCard3 = () => {
                 <HeaderComponent
                     hdrText={'My Loyality Card'} />
                 <View>
-                    <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 20, marginBottom: 10 }} >My Loyality Card</Text>
+                    <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20), marginBottom: 10 }} >My Loyality Card</Text>
                     <Text style={{ marginVertical: 10 }} >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</Text>
                     <View style={{ height: 44, width: '100%', backgroundColor: '#F4F5F7', marginVertical: 10, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 15 }} >
                         <Text>Loyality Card Number</Text>

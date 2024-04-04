@@ -6,6 +6,7 @@ import TextInputWithLabel from '../../components/TextInputWithLabel';
 import imagePath from '../../config/imagePath';
 import BtnComponent from '../../components/ButtonComponent';
 import navigationStrings from '../../config/navigationStrings';
+import { textScale } from '../../config';
 
 // create a component
 const Checkout3 = ({navigation}) => {
@@ -33,7 +34,7 @@ const Checkout3 = ({navigation}) => {
                 <View style={{ height: 6, width: '30%', backgroundColor: '#D0D3D3', borderBottomRightRadius: 8, borderTopRightRadius: 8 }}>
                 </View>
             </View>
-            <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Payment Details</Text>
+            <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }} >Payment Details</Text>
 
                 <TextInputWithLabel
                     placeholder={'Card Number'} />

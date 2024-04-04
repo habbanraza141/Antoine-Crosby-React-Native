@@ -5,6 +5,7 @@ import HeaderComponent from '../../components/HeaderComponent';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
+import { textScale } from '../../config';
 
 // create a component
 const ChangePassword = ({ navigation }) => {
@@ -13,7 +14,7 @@ const ChangePassword = ({ navigation }) => {
             <HeaderComponent
               onPress={()=>navigation.goBack()}
                 hdrText={'Change Password'} />
-            <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }}>Change Password</Text>
+            <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }}>Change Password</Text>
             <TextInputWithLabel
                 placeholder={'Current Password'}
                 img={imagePath.showed} />

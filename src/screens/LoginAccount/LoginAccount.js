@@ -7,28 +7,28 @@ import imagePath from '../../config/imagePath';
 import HeaderComponent from '../../components/HeaderComponent';
 import navigationStrings from '../../config/navigationStrings';
 import TabRoutes from '../../navigation/TabRoutes';
-import { moderateScale, moderateScaleVertical } from '../../config';
+import { moderateScale, moderateScaleVertical, textScale } from '../../config';
 // create a component
 const LoginAccount = ({navigation}) => {
     return (
         <View style={styles.container}>
             <View style={styles.midView}>
-                <Text style={{ fontWeight: 'bold', fontSize: 16 }}>Welcome Back</Text>
+                <Text style={{ fontWeight: 'bold', fontSize: textScale(16) }}>Welcome Back</Text>
                 <View style={{ flexDirection: 'row' }}>
-                    <Text style={{ fontSize: 26 }}>Login Your </Text>
-                    <Text style={{ fontWeight: 'bold', fontSize: 26, fontStyle: 'italic' }}>Account</Text>
+                    <Text style={{ fontSize: textScale(26) }}>Login Your </Text>
+                    <Text style={{ fontWeight: 'bold', fontSize: textScale(26), fontStyle: 'italic' }}>Account</Text>
                 </View>
-                <Text style={{ fontSize: 14, marginVertical: 8 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </Text>
+                <Text style={{ fontSize: textScale(14), marginVertical: 8 }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do </Text>
                 <TextInputWithLabel
                     placeholder={'Enter Email Address'} />
                 <TextInputWithLabel
                     placeholder={'Password'} />
 
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginVertical: 8 }}>
-                    <Text style={{ fontSize: 14 }}>Remember Me</Text>
+                    <Text style={{ fontSize: textScale(14) }}>Remember Me</Text>
                     <TouchableOpacity
                     onPress={()=>navigation.navigate(navigationStrings.FORGET_PASSWORD)}>
-                    <Text style={{ fontSize: 14 }}>Forgot Password?</Text>
+                    <Text style={{ fontSize: textScale(14) }}>Forgot Password?</Text>
                     </TouchableOpacity>
                 </View>
                 <BtnComponent
@@ -38,12 +38,12 @@ const LoginAccount = ({navigation}) => {
                     img={imagePath.btnForward} />
 
                 <View style={{ justifyContent: 'center', marginVertical: 8, flexDirection: 'row' }}>
-                    <Text style={{ fontSize: 14 }}>Don't have a account? </Text>
+                    <Text style={{ fontSize: textScale(14) }}>Don't have a account? </Text>
                     <TouchableOpacity
                     
                     onPress={()=>navigation.navigate(navigationStrings.CREATE_ACCOUNT)}>
 
-                    <Text style={{ fontSize: 14, fontStyle: 'italic', textDecorationLine: 'underline' }}>Sign Up</Text>
+                    <Text style={{ fontSize: textScale(14), fontStyle: 'italic', textDecorationLine: 'underline' }}>Sign Up</Text>
                     </TouchableOpacity>
                 </View>
             </View>

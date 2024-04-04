@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity } from 'react-native';
+import { textScale } from '../config';
 // import Colors from '../config/Colors';
 
 const TextInputWithLabel = ({
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     },
 
     labelTextStyle: {
-        fontSize: 14,
+        fontSize: textScale(14),
         color: 'black'
     },
 

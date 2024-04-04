@@ -5,6 +5,7 @@ import HeaderComponent from '../../components/HeaderComponent';
 import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
 import navigationStrings from '../../config/navigationStrings';
+import { textScale } from '../../config';
 
 // create a component
 const MyProfile = ({navigation}) => {
@@ -22,43 +23,43 @@ const MyProfile = ({navigation}) => {
                     style={{ height: 78, width: 78, marginRight: 15 }}
                     source={imagePath.men3} />
                 <View>
-                    <Text style={{ fontSize: 20, color: '#fff', fontStyle: 'italic' }} >Andks Dbnsjndks</Text>
-                    <Text style={{ fontSize: 15, color: '#fff' }} >jhds@gmakjkds.com</Text>
+                    <Text style={{ fontSize: textScale(20), color: '#fff', fontStyle: 'italic' }} >Andks Dbnsjndks</Text>
+                    <Text style={{ fontSize: textScale(15), color: '#fff' }} >jhds@gmakjkds.com</Text>
                 </View>
             </View>
-            <Text style={{ marginTop: 25, marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }}>Personal Information</Text>
+            <Text style={{ marginTop: 25, marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }}>Personal Information</Text>
 
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }} >
 
                 <View style={styles.infoStyleAbove} >
-                    <Text style={{ fontSize: 12, fontWeight: 'bold' }} >First Name*</Text>
+                    <Text style={{ fontSize: textScale(12), fontWeight: 'bold' }} >First Name*</Text>
                     <Text style={styles.inlineStyle}>Antoine</Text>
 
                 </View>
                 <View style={styles.infoStyleAbove} >
-                    <Text style={{ fontSize: 12, fontWeight: 'bold' }} >Last Name*</Text>
+                    <Text style={{ fontSize: textScale(12), fontWeight: 'bold' }} >Last Name*</Text>
                     <Text style={styles.inlineStyle}>Cros</Text>
 
                 </View>
             </View>
 
             <View style={styles.infoStyle} >
-                <Text style={{ fontSize: 12, fontWeight: 'bold' }} >Email Address</Text>
+                <Text style={{ fontSize: textScale(12), fontWeight: 'bold' }} >Email Address</Text>
                 <Text style={styles.inlineStyle}>antoine-cros@gmail.com</Text>
 
             </View>
             <View style={styles.infoStyle} >
-                <Text style={{ fontSize: 12, fontWeight: 'bold' }} >Phone Number</Text>
+                <Text style={{ fontSize: textScale(12), fontWeight: 'bold' }} >Phone Number</Text>
                 <Text style={styles.inlineStyle}>+92345 767 767667</Text>
 
             </View>
             <View style={styles.changePassword} >
-                <Text style={{ fontSize: 12, fontWeight: 'bold' }} >Password*</Text>
+                <Text style={{ fontSize: textScale(12), fontWeight: 'bold' }} >Password*</Text>
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }} >
                     <Text style={styles.inlineStyle}>*********</Text>
                     <TouchableOpacity
                       onPress={()=>navigation.navigate(navigationStrings.CHANGE_PASSWORD)}>
-                        <Text style={{ fontSize: 12, fontWeight: '600', fontStyle: 'italic', textDecorationLine: 'underline' }} >Change Password</Text>
+                        <Text style={{ fontSize: textScale(12), fontWeight: '600', fontStyle: 'italic', textDecorationLine: 'underline' }} >Change Password</Text>
                     </TouchableOpacity>
                 </View>
 
@@ -107,7 +108,7 @@ const styles = StyleSheet.create({
     },
 
     inlineStyle: {
-        fontSize: 16,
+        fontSize: textScale(16),
         color: '#3E3830',
     },
 });

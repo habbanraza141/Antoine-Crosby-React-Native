@@ -7,6 +7,7 @@ import TextInputWithLabel from '../../components/TextInputWithLabel';
 import CodeInput from '../../components/CodeInput';
 import BtnComponent from '../../components/ButtonComponent';
 import navigationStrings from '../../config/navigationStrings';
+import { textScale } from '../../config';
 
 // create a component
 const Checkout4 = ({ navigation }) => {
@@ -27,7 +28,7 @@ const Checkout4 = ({ navigation }) => {
                 </View>
                 <ScrollView showsVerticalScrollIndicator={false} >
 
-                    <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Review Order</Text>
+                    <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }} >Review Order</Text>
 
                     <View style={{ height: 108, backgroundColor: '#F4F5F7', width: '100%', padding: 7, flexDirection: 'row', alignItems: 'center', paddingRight: 15 }}>
                         <View style={{ width: 97, height: 94, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center' }} >
@@ -37,41 +38,41 @@ const Checkout4 = ({ navigation }) => {
                                 source={imagePath.fashionBag} />
                         </View>
                         <View style={{ height: 68, width: 120, justifyContent: 'space-between', marginLeft: 15 }} >
-                            <Text style={{ fontSize: 16, fontStyle: 'italic' }} >Shopping Bag</Text>
-                            <Text style={{ fontSize: 12, fontWeight: 'bold' }} >USD 87.00</Text>
-                            <Text style={{ fontSize: 11 }} >Size M | #2</Text>
+                            <Text style={{ fontSize: textScale(16), fontStyle: 'italic' }} >Shopping Bag</Text>
+                            <Text style={{ fontSize: textScale(12), fontWeight: 'bold' }} >USD 87.00</Text>
+                            <Text style={{ fontSize: textScale(11) }} >Size M | #2</Text>
                         </View>
                     </View>
-                    <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Promo Code</Text>
+                    <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }} >Promo Code</Text>
                     <CodeInput
                         placeholder={'Enter Code'}
                         rightText={'Apply Code'} />
-                    <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Redeem Loyality Points</Text>
+                    <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }} >Redeem Loyality Points</Text>
                     <CodeInput
                         placeholder={'Enter Code'}
                         rightText={'Redeem Now'} />
                     <Text>Available points: 2500 </Text>
                     <View style={{ height: 287, backgroundColor: '#14252A', marginTop: 25, paddingHorizontal: 20, paddingVertical: 40, justifyContent: 'space-between', borderRadius: 5 }}>
-                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: 20, color: '#fff' }}>Payment</Text>
+                        <Text style={{ fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20), color: '#fff' }}>Payment</Text>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ color: '#fff', fontSize: 15, fontStyle: 'italic' }} >Promo Code Discount</Text>
-                            <Text style={{ color: '#fff', fontSize: 15, }} >312.21 USD</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), fontStyle: 'italic' }} >Promo Code Discount</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), }} >312.21 USD</Text>
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ color: '#fff', fontSize: 15, fontStyle: 'italic' }} >Loyality Point Discount</Text>
-                            <Text style={{ color: '#fff', fontSize: 15, }} >312.21 USD</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), fontStyle: 'italic' }} >Loyality Point Discount</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), }} >312.21 USD</Text>
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ color: '#fff', fontSize: 15, fontStyle: 'italic' }} >Shipping</Text>
-                            <Text style={{ color: '#fff', fontSize: 15, }} >312.21 USD</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), fontStyle: 'italic' }} >Shipping</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), }} >312.21 USD</Text>
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ color: '#fff', fontSize: 15, fontStyle: 'italic' }} >Sub Total</Text>
-                            <Text style={{ color: '#fff', fontSize: 15, }} >312.21 USD</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), fontStyle: 'italic' }} >Sub Total</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), }} >312.21 USD</Text>
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <Text style={{ color: '#fff', fontSize: 15, fontStyle: 'italic' }} >Total</Text>
-                            <Text style={{ color: '#fff', fontSize: 15, }} >312.21 USD</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), fontStyle: 'italic' }} >Total</Text>
+                            <Text style={{ color: '#fff', fontSize: textScale(15), }} >312.21 USD</Text>
                         </View>
                     </View>
                     <BtnComponent

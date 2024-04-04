@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView } from 'r
 import HeaderComponent from '../../components/HeaderComponent';
 import imagePath from '../../config/imagePath';
 import navigationStrings from '../../config/navigationStrings';
+import { textScale } from '../../config';
 
 // create a component
 const MyOrders = ({ navigation }) => {
@@ -19,7 +20,7 @@ const MyOrders = ({ navigation }) => {
 
                 </View>
                 <View style={{ paddingHorizontal: 20 }} >
-                    <Text style={{ marginVertical: 20, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }}>My Orders</Text>
+                    <Text style={{ marginVertical: 20, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }}>My Orders</Text>
                     <TouchableOpacity
                         onPress={() => navigation.navigate(navigationStrings.ORDER_NUMBER)}
                         style={{ height: 108, backgroundColor: '#F4F5F7', width: '100%', padding: 7, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingRight: 15 }}>
@@ -35,8 +36,8 @@ const MyOrders = ({ navigation }) => {
                                     <Text>Shipped</Text>
                                 </View>
                             </View>
-                            <Text style={{ fontSize: 12, fontWeight: 'bold' }} >USD 87.00</Text>
-                            <Text style={{ fontSize: 11 }} >25 October 2023</Text>
+                            <Text style={{ fontSize: textScale(12), fontWeight: 'bold' }} >USD 87.00</Text>
+                            <Text style={{ fontSize: textScale(11) }} >25 October 2023</Text>
                         </View>
                     </TouchableOpacity>
                 </View>

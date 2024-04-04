@@ -6,6 +6,7 @@ import imagePath from '../../config/imagePath';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import BtnComponent from '../../components/ButtonComponent';
 import navigationStrings from '../../config/navigationStrings';
+import { textScale } from '../../config';
 
 // create a component
 const EditAddress = ({navigation}) => {
@@ -14,7 +15,7 @@ const EditAddress = ({navigation}) => {
             <HeaderComponent
             onPress={()=>navigation.goBack()}
                 hdrText={'Edit Address'} />
-            <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }}>Edit Address</Text>
+            <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }}>Edit Address</Text>
             
             <TextInputWithLabel
                 placeholder={'Address Line'} />

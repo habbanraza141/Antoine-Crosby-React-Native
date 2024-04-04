@@ -30,10 +30,10 @@ const MyWishlist = ({ navigation }) => {
                             style={{ height: 74, width: 74 }} />
                     </View>
                     <View style={{ height: 68, justifyContent: 'space-between', marginLeft: 15 }} >
-                        <Text style={{ fontSize: 16 }} >Shopping Bag</Text>
-                        <Text style={{ fontSize: 12, fontWeight: 'bold' }} >USD 87.00</Text>
+                        <Text style={{ fontSize: textScale(16) }} >Shopping Bag</Text>
+                        <Text style={{ fontSize: textScale(12), fontWeight: 'bold' }} >USD 87.00</Text>
                         <View style={{ width: 62, height: 19, justifyContent: 'center', backgroundColor: '#E6E8EB', alignItems: 'center' }} >
-                            <Text style={{ fontSize: 10 }} >In Stock</Text>
+                            <Text style={{ fontSize: textScale(10) }} >In Stock</Text>
                         </View>
                     </View>
                 </View>

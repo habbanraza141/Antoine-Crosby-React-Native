@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity } from 'react-native';
 import imagePath from '../config/imagePath';
+import { textScale } from '../config';
 // import Colors from '../config/Colors';
 
 const CodeInput = ({
@@ -15,7 +16,7 @@ rightText,
                 style={styles.inlineStyle}
             />
             <TouchableOpacity style={styles.right} >
-                <Text style={{color: '#fff', fontSize: 12}} >{rightText} →</Text>
+                <Text style={{color: '#fff', fontSize: textScale(12)}} >{rightText} →</Text>
 
             </TouchableOpacity>
         </View>

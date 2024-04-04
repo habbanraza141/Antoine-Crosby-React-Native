@@ -5,6 +5,7 @@ import HeaderComponent from '../../components/HeaderComponent';
 import BtnComponent from '../../components/ButtonComponent';
 import TextInputWithLabel from '../../components/TextInputWithLabel';
 import imagePath from '../../config/imagePath';
+import { textScale } from '../../config';
 
 // create a component
 const EditProfile = ({ navigation }) => {
@@ -26,7 +27,7 @@ const EditProfile = ({ navigation }) => {
                     </ImageBackground>
 
                     <View>
-                        <Text style={{ fontSize: 20, color: '#14252A', fontStyle: 'italic', marginBottom: 5 }} >Andks Dbnsjndks</Text>
+                        <Text style={{ fontSize: textScale(20), color: '#14252A', fontStyle: 'italic', marginBottom: 5 }} >Andks Dbnsjndks</Text>
                         <TouchableOpacity style={{ height: 33, width: 131, backgroundColor: '#D9D9D9', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', paddingHorizontal: 15 }} >
                             <Text>Attach File</Text>
                             <Image

@@ -6,6 +6,7 @@ import TextInputWithLabel from '../../components/TextInputWithLabel';
 import imagePath from '../../config/imagePath';
 import BtnComponent from '../../components/ButtonComponent';
 import navigationStrings from '../../config/navigationStrings';
+import { textScale } from '../../config';
 
 // create a component
 const Checkout1 = ({ navigation }) => {
@@ -33,7 +34,7 @@ const Checkout1 = ({ navigation }) => {
                     <View style={{ height: 6, width: '80%', backgroundColor: '#D0D3D3', borderBottomRightRadius: 8, borderTopRightRadius: 8 }}>
                     </View>
                 </View>
-                <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }} >Shipping Details</Text>
+                <Text style={{ marginVertical: 10, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }} >Shipping Details</Text>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                     <TextInputWithLabel
                         inputStyle={{ width: 165 }}

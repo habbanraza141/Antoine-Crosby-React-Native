@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
 import imagePath from '../../../config/imagePath';
+import { textScale } from '../../../config';
 
 const FeaturedItems = ({item}) => {
     return (
@@ -11,12 +12,12 @@ const FeaturedItems = ({item}) => {
                     source={item.featuredItemImage} />
             </View>
             <View style={{ marginVertical: 10 }} >
-                <Text style={{ fontSize: 16, }} >New Arrival</Text>
-                <Text style={{ fontSize: 20, fontStyle: 'italic' }} >{item.featuredItemName}</Text>
+                <Text style={{ fontSize: textScale(16), }} >New Arrival</Text>
+                <Text style={{ fontSize: textScale(20), fontStyle: 'italic' }} >{item.featuredItemName}</Text>
 
             </View>
             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }} >
-                <Text style={{ fontSize: 14, fontWeight: 'bold' }} >{item.featuredItemPrice} USD</Text>
+                <Text style={{ fontSize: textScale(14), fontWeight: 'bold' }} >{item.featuredItemPrice} USD</Text>
                 <View style={{ height: 41, width: 41, backgroundColor: '#14252A', alignItems: 'center', justifyContent: 'center' }}>
                     <Image
                         style={{ height: 18, width: 18 }}

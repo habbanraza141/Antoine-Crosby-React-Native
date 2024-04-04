@@ -15,7 +15,7 @@ const AddNewAddress = ({ navigation }) => {
 
                 <HeaderComponent
                     hdrText={'Add New Address'} />
-                <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }}>Add New Address</Text>
+                <Text style={{ marginBottom: 15, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }}>Add New Address</Text>
 
                 <TextInputWithLabel
                     placeholder={'Address Line'} />

@@ -52,7 +52,7 @@ const MyAddress = ({ navigation }) => {
                                 style={{ width: 19, height: 18 }}
                                 source={imagePath.home2} />
                         </View>
-                        <Text style={{ fontSize: 20, fontWeight: 'bold' }} >{item.placeName}</Text>
+                        <Text style={{ fontSize: textScale(20), fontWeight: 'bold' }} >{item.placeName}</Text>
                     </View>
 
                     <View style={{ flexDirection: 'row', width: 45, justifyContent: 'space-between' }} >
@@ -81,7 +81,7 @@ const MyAddress = ({ navigation }) => {
                 <HeaderComponent
                     hdrText={'My Address'}
                     onPress={() => navigation.goBack()} />
-                <Text style={{ marginBottom: 20, fontStyle: 'italic', fontWeight: '500', fontSize: 20 }}>Saved Address</Text>
+                <Text style={{ marginBottom: 20, fontStyle: 'italic', fontWeight: '500', fontSize: textScale(20) }}>Saved Address</Text>
                 <View>
 
                     <FlatList
