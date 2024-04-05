@@ -2,7 +2,8 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, SafeAreaView, ScrollView } from 'react-native';
 import HeaderComponent from '../../components/HeaderComponent';
-
+import { textScale } from '../../config';
+textScale
 // create a component
 const ContactInformation = ({ navigation }) => {
     return (

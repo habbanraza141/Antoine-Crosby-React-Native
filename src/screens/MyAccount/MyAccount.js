@@ -6,9 +6,26 @@ import BtnComponent from '../../components/ButtonComponent';
 import imagePath from '../../config/imagePath';
 import navigationStrings from '../../config/navigationStrings';
 import { textScale } from '../../config';
+import store from '../../redux/store';
+import { saveUserData } from '../../redux/reducers/auth';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { showError } from '../../utils/helperFunctions';
+const { dispatch } = store;
 
 // create a component
 const MyAccount = ({ navigation }) => {
+
+
+    const onLogout = () =>{
+        AsyncStorage.removeItem('userData').then((res)=>{
+            console.log("user remove suceessfully..!!")
+            dispatch(saveUserData({}))
+        }).catch((error)=>{
+            showError("Data not found")
+        })
+
+    }
+
     return (
         <View style={styles.container}>
             <SafeAreaView>
@@ -124,6 +141,7 @@ const MyAccount = ({ navigation }) => {
 
                 <View style={{ marginVertical: 10, paddingHorizontal: 20 }} >
                     <BtnComponent
+                        onPress={onLogout}
                         img={imagePath.logout}
                         btnText={'Logout'} />
                 </View>

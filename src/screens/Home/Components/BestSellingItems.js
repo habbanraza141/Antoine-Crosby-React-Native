@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import imagePath from '../../../config/imagePath';
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart, removeFromCart } from '../../../redux/actions/action';
+import { addToCart, removeFromCart } from '../../../redux/actions/addToCart';
 import { textScale } from '../../../config';
 
 // create a component
@@ -11,7 +11,7 @@ const BestSellingItems = (props) => {
     const item = props.item
     const [isTrue, setTrue] = useState(false)
     const dispatch = useDispatch()
-    const cartItems = useSelector((state) => state.reducer)
+    const cartItems = useSelector((state) => state.addToCart)
     const [isAdded, setIsAdded] = useState(false)
 
     const handleAddToCart = (item) => {

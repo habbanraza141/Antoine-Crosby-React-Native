@@ -5,7 +5,7 @@ import CustomDrawerContent from "../components/CustomDrawerContent";
 
 
 const Drawer = createDrawerNavigator()
-export default function DrawerStack() {
+export default function DrawerStack () {
     return (
         <Drawer.Navigator
             drawerContent={(props) => <CustomDrawerContent {...props} />} >

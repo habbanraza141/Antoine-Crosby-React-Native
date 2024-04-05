@@ -5,7 +5,7 @@ import { textScale } from '../../../config';
 
 
 const CartComponent = () => {
-    const cartData = useSelector((state) => state.reducer)
+    const cartData = useSelector((state) => state.addToCart)
     const [cartItems, setCartItems] = useState(0)
     useEffect(() => {
         setCartItems(cartData.length)

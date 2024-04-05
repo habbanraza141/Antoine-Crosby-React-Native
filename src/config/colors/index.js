@@ -10,6 +10,7 @@ const Colors = {
     yellow: 'rgb(255,250,62)',
     grey: '#A1A8AA',
     f3: '#f3f3f3',
-    a2: '#14252A'
+    a2: '#14252A',
+    black: '#000000'
   };
   export default Colors;
