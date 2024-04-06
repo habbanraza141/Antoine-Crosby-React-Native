@@ -3,9 +3,6 @@ import {  DrawerContentScrollView,  DrawerItem} from '@react-navigation/drawer';
 
 import { Image, StyleSheet, View, Text } from 'react-native';
 import imagePath from '../config/imagePath';
-import ShopStack from '../navigation/ShopStack';
-import CardStack from '../navigation/CardStack';
-import ProfileStack from '../navigation/ProfileStack';
 import navigationStrings from '../config/navigationStrings';
 import { textScale } from '../config';
 
@@ -28,26 +25,8 @@ export default function CustomDrawerContent(props) {
       <View style={{height: 0.5, backgroundColor: '#9A9A9A', marginHorizontal: 20}} >
 
       </View>
-      <DrawerItem
-        label="Shop"
-        labelStyle={styles.labelStyle}
-        onPress={() => navigation.navigate('ShopStack')}
-      />
-      <DrawerItem
-        label="Cart"
-        labelStyle={styles.labelStyle}
-        onPress={() => navigation.navigate('CartStack')}
-      />
-      <DrawerItem
-        label="Loyality Card"
-        labelStyle={styles.labelStyle}
-        onPress={() => navigation.navigate('CardStack')}
-      />
-      <DrawerItem
-        label="My Profile"
-        labelStyle={styles.labelStyle}
-        onPress={() => navigation.navigate('ProfileStack')}
-      />
+
+
       <DrawerItem
         label="Size and Fit"
         labelStyle={styles.labelStyle}
